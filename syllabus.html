@@ -13,7 +13,8 @@
 
 <title>Syllabus</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -59,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -295,12 +300,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -308,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -355,215 +360,7 @@ div.tocify {
 </div>
 
 
-<div id="contact-information" class="section level2">
-<h2>Contact Information</h2>
-<p><strong>Instructor</strong>: Jonathan “Nate” Wells</p>
-<p><strong>Email</strong>: <a href="mailto:wellsj@reed.edu" class="email">wellsj@reed.edu</a></p>
-<p><strong>Classroom</strong>: Library 389</p>
-<p><strong>Office</strong>: Library 392</p>
-<p><strong>In-person Office Hours</strong>: M 3-4pm, W 10-11am, F 10-11am</p>
-<p><strong>Virtual Office Hours</strong>: T 2-3pm</p>
-<p><strong>Zoom Link</strong>: <a href="https://zoom.us/my/wellsj392" class="uri">https://zoom.us/my/wellsj392</a></p>
-<hr />
-</div>
-<div id="course-information" class="section level2">
-<h2>Course Information</h2>
-<div id="course-description" class="section level3">
-<h3>Course Description</h3>
-<p>This course is an overview of modern approaches to analyzing large and complex data sets that arise in a variety of fields from biology to marketing to astrophysics. The most important modeling and predictive techniques will be covered, including regression, classification, clustering, resampling, and tree-based methods. This course will make extensive use of the R programming language.</p>
-<p><strong>Prerequisites</strong>: MATH141, or Instructor Consent.</p>
-</div>
-<div id="distribution-requirements" class="section level3">
-<h3>Distribution Requirements</h3>
-<p>his course can be used towards your Group III, “Natural, Mathematical, and Psychological Science,” requirement. It accomplishes the following learning goals for the group:</p>
-<ol style="list-style-type: decimal">
-<li>Use and evaluate quantitative data or modeling, or use logical/mathematical reasoning to evaluate, test or prove statements.</li>
-<li>Given a problem or question, formulate a hypothesis or conjecture, and design an experiment, collect data or use mathematical reasoning to test or validate it.</li>
-<li>Collect, interpret and analyze data.</li>
-</ol>
-<p>This course does not satisfy the “primary data collection and analysis” requirement.</p>
-</div>
-<div id="textbook" class="section level3">
-<h3>Textbook</h3>
-<p>Students do not need to purchase paper copies of texts.</p>
-<ul>
-<li>(Primary) <em>An Introduction to Statistical Learning</em>, 2nd Edition (2021) by James, Witten, Hastie, and Tibshirani. A free pdf can be obtained through <a href="https://link-springer-com.proxy.library.reed.edu/book/10.1007/978-1-0716-1418-1">SpringerLink</a> (log-in using your Reed credentials)</li>
-<li>(Secondary) <em>Applied Predictive Modeling</em>, 1st Edition by Kuhn and Johnson. We will use select content from this text to supplement . A free pdf can be obtained through <a href="https://link-springer-com.proxy.library.reed.edu/book/10.1007%2F978-1-4614-6849-3">SpringerLink</a> (log-in using your Reed credentials)</li>
-</ul>
-</div>
-<div id="course-resources" class="section level3">
-<h3>Course Resources</h3>
-<p>The following web-based resources will be used for communicating class information:</p>
-<ul>
-<li><p>Slack <a href="https://reedmath243fall2021.slack.com" class="uri">https://reedmath243fall2021.slack.com</a> (<em>announcements, discussions, direct messaging</em>).</p></li>
-<li><p>Course Website <a href="https://Reed-Stat-Learning-Fall-2021.github.io" class="uri">https://Reed-Stat-Learning-Fall-2021.github.io</a> (<em>documents, a daily schedule, assignments</em>).</p></li>
-<li><p>GitHub Classroom <a href="https://classroom.github.com/classrooms/88862064-reed-stat-learning-fall-2021-classroom" class="uri">https://classroom.github.com/classrooms/88862064-reed-stat-learning-fall-2021-classroom</a> (<em>homework submission</em>).</p></li>
-</ul>
-</div>
-<div id="technology" class="section level3">
-<h3>Technology</h3>
-<p>You are encouraged to bring a personal computer to class each day for notetaking and live coding. Access to a computer with webbrowser will be required for homework completion and submission. Computing &amp; Information Services offers programs for long-term laptop loan: <a href="https://www.reed.edu/cis/facilities/student-technology-equipment-program.html" class="uri">https://www.reed.edu/cis/facilities/student-technology-equipment-program.html</a></p>
-<p>We will make very frequent use of the R programming language to create statistical models, run simulations, and implement stat learning algorithms. All homework will be completed using the RStudio IDE. R and RStudio are free to use, and can either be installed locally on your computer, or can be accessed using the Reed RStudio Server: <a href="https://rstudio.reed.edu/" class="uri">https://rstudio.reed.edu/</a></p>
-<p>Throughout the term, we will use GitHub to manage and submit assignments. GitHub is a hosting service to house Git-based projects online, and is designed to assist with version control and collaboration on big projects. <a href="https://github.com/" class="uri">https://github.com/</a></p>
-</div>
-<div id="communication" class="section level3">
-<h3>Communication</h3>
-<p>If you would like to contact me, I can most easily be reached via Slack message weekdays between 8am and 6pm. While I try to answer messages as soon as possible, in some cases, I may not be able to respond until the following school day. If you’d prefer to talk live, send me a message and we can schedule a time to chat on zoom.</p>
-<hr />
-</div>
-</div>
-<div id="course-outcomes" class="section level2">
-<h2>Course Outcomes</h2>
-<p>By the end of the course, a student should be able to:</p>
-<ul>
-<li><p>Articulate and compare the different philosophical approaches to prediction, statistical inference, classification, and clustering.</p></li>
-<li><p>Create valid statistical models, perform data analysis using software, and communicate results in non-technical language using reproducible methods in order to answer a particular research question.</p></li>
-<li><p>Implement simulation and randomization algorithms in order to demonstrate and assess properties of statistical models.</p></li>
-<li><p>Assess and compare the performance of a variety of statistical models, and select appropriate models according to suitable criteria.</p></li>
-<li><p>Apply statistical learning techniques to real-world data and problems.</p></li>
-<li><p>Justify and describe properties of particular statistical learning methods by appealing to mathematical theory.</p></li>
-</ul>
-<hr />
-</div>
-<div id="course-format" class="section level2">
-<h2>Course Format</h2>
-<p>A typical class day will involve the following:</p>
-<ul>
-<li><em>Reading Assignment</em>. Every class will have an assigned reading which you are strongly encouraged to review prior to the start of class.</li>
-<li><em>Active Lectures</em>. Our 50-minute class meetings will include an interactive lecture by the instructor, with some time devoted to discussion either class-wide or in small groups.</li>
-<li><em>Group Work</em>. At least once each week, a majority of class time will be reserved for collaborative coding and group work with your peers. Students should bring a personal laptop computer to class on these days.</li>
-</ul>
-<div id="workload" class="section level3">
-<h3>Workload</h3>
-<p>A prepared student will attend class for 50 minutes per day, three days each week, and spend about two to three hours per day of class on work outside the classroom (reading, doing homework, working on projects, discussing, studying, etc.). Together, this represents a 9 - 12 hour per week commitment.</p>
-<hr />
-</div>
-</div>
-<div id="grading-criteria" class="section level2">
-<h2>Grading Criteria</h2>
-<p>Your grade in the class will be determined by your proficiency in each of the <em>Course Outcomes</em>, as demonstrated in the following assessments:</p>
-<ol style="list-style-type: decimal">
-<li>Daily Reading</li>
-<li>Homework</li>
-<li>Participation</li>
-<li>Midterm Exams</li>
-<li>Final Project</li>
-</ol>
-<div id="daily-reading" class="section level3">
-<h3>Daily Reading</h3>
-<p>Statistical knowledge takes time to develop, and understanding deepens upon revisiting a concept a <span class="math inline">\(2^\text{nd}\)</span>, <span class="math inline">\(3^\text{rd}\)</span>, or <span class="math inline">\(n^\text{th}\)</span> time. Studying basic terminology and elementary examples in the textbook before class means that class can be spent clarifying and expanding ideas, rather than introducing them. Daily reading assignments will be posted on our course webpage, and will list the specific section(s) to read for each day, along with a response question to be completed by 8am each day of class (to give me time to review them before class). Responses should be posted in the <code>#daily-reading</code> channel of our Slack workspace. The questions are not intended to be overly difficult, but should help both you and I highlight topics that need further review. Responses will be assessed primarily on the basis of completion. No extensions on daily readings will be given, but up to three assignments may be missed without penalty.</p>
-</div>
-<div id="homework" class="section level3">
-<h3>Homework</h3>
-<p>A weekly problem set will be made available after class on Wednesday, due by 5pm on the following Wednesday. Some time on Monday or Friday of each week will be devoted to collaborative coding components of the assignment. Problem sets must be completed as a .rmd file in RStudio and submitted via GitHub. Detailed submission instructions can be found on the <a href="https://reed-stat-learning-fall-2021.github.io/homework.html">course webpage</a>. Up to two times throughout the term, you may request up to a 5 day extension on your assignment. Except in extraordinary circumstances, requests must be made prior to an assignment’s due date.</p>
-</div>
-<div id="in-class-participation" class="section level3">
-<h3>In-class Participation</h3>
-<p>It is important to attend each class when able and to actively participate via notetaking and discussion. If you are unable to attend class for any reason, please notify me promptly so that we can make appropriate arrangements for you to make-up missed work. Frequent absences for which make-up work is not completed will be reflected in your final course grade.</p>
-<p><strong>Please do not come to class if you are ill, or if you’ve had close exposure to someone else who has been ill.</strong></p>
-</div>
-<div id="midterm-exams" class="section level3">
-<h3>Midterm Exams</h3>
-<p>Two take-home exams will be given during the term, and will be made available on a Friday, to be completed before class the following Monday. Tentatively, the first is scheduled for Friday, October 8th (Week 6) and the second for Friday, November 19 (Week 11). The exams are intended to take between 3 and 4 hours to complete.</p>
-</div>
-<div id="final-project" class="section level3">
-<h3>Final Project</h3>
-<p>Throughout the second half of the term, you will work in groups of 3 or 4 on a project that answers a significant research question using real-world data, by implementing the fundamental techniques developed in our class, as well as some more advanced methods from supplementary sources. The project will culminate in a 20 minute presentation during finals week and a 5-10 page reproducible technical report.</p>
-<hr />
-</div>
-</div>
-<div id="community-information" class="section level2">
-<h2>Community Information</h2>
-<div id="accessibility" class="section level3">
-<h3>Accessibility</h3>
-<p>Reed College is committed to creating inclusive and accommodating learning environments. Please notify me as soon as possible if there are aspects of the instruction or design of this course that result in barriers to your participation. I also encourage you to contact Disability &amp; Accessibility Resources (DAR) at <a href="https://www.reed.edu/disability-resources/" class="uri">https://www.reed.edu/disability-resources/</a> for additional support, including official accommodations. If you have already been approved for accommodations, please have DAR provide a letter during the first week of classes, or as soon as possible after approval. I will then contact you to schedule a meeting during which we can discuss the particular implementation of your accommodations.</p>
-</div>
-<div id="academic-integrity" class="section level3">
-<h3>Academic Integrity</h3>
-<p>Students are allowed and encouraged to collaborate on most in-class and homework assignments. However, any work that you turn in for grading must be your own. You are welcome to use other paper or internet resources to supplement content we cover in this course, with the exception of solutions to homework problems. Copying solutions from the internet or other sources is an Honor Principle violation. Exams will explicitly mention what resources may be consulted. All written work that references material outside of the textbook or lecture should be accompanied by an appropriate citation.</p>
-</div>
-<div id="code-of-conduct" class="section level3">
-<h3>Code of Conduct</h3>
-<p>I expect all members of Math 243 to make participation a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
-<p>I expect everyone to act and interact in ways that contribute to an open, welcoming diverse, inclusive, and healthy community of learners. Examples of unacceptable behavior include: using sexualized language or imagery, making insulting or derogatory comments, harassing someone publicly or privately, or other unprofessional conduct.</p>
-<p>Instead you can contribute to a positive learning environment by demonstrating empathy and kindness, being respectful of differing viewpoints and experiences, and giving and gracefully accepting constructive feedback.</p>
-</div>
-<div id="assignment-feedback" class="section level3">
-<h3>Assignment Feedback</h3>
-<p>You will receive timely feedback on your homework via GitHub, either from me or the course grader (another mathematics undergraduate). Each homework problem can earn up to five points for statistical content, and two points for the quality of writing and clarity of code. You are strongly encouraged to review comments on your solutions and rework missed problems. You are welcome to post questions about past homework problems on our Slack channel and to talk to me about them during office hours.</p>
-</div>
-<div id="help" class="section level3">
-<h3>Help</h3>
-<p>I strongly encourage to attend my office hours each week. You are welcome to come either with specific questions, or just with general uncertainties about content we’ve discussed. If you are unable to attend scheduled office hours, please message me on Slack to schedule an alternative appointment (either in-person or virtual).</p>
-<p>Our course assistant (a Reed undergraduate) will also be holding several help sessions each week to provide assistance with and facilitate collaboration on homework.</p>
-<p>Finally, every Reed student is entitled to one hour of free individual tutoring per week. Use the tutoring app in IRIS to schedule meetings with a student tutor.</p>
-<hr />
-</div>
-</div>
-<div id="tentative-schedule" class="section level2">
-<h2>Tentative Schedule</h2>
-<p><em>This is the schedule as of Day 1. A more up-to-date schedule can be found <a href="https://reed-stat-learning-fall-2021.github.io/schedule.html">here</a>.</em></p>
-<table>
-<thead>
-<tr class="header">
-<th>Week</th>
-<th>Sections Covered</th>
-<th>Week</th>
-<th>Sections Covered</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Foundations of Stat Learning</td>
-<td>8</td>
-<td>Tree-Based Models</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Linear Models</td>
-<td>9</td>
-<td>Tree-Based Models</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Resampling Methods</td>
-<td>10</td>
-<td>Support Vector Machines</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Model Selection</td>
-<td>11</td>
-<td>Unsupervised Learning (Exam 2)</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Beyond Linear Models</td>
-<td>12</td>
-<td>Unsupervised Learning</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Classification (Exam 2)</td>
-<td>13</td>
-<td>Special Topics</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Classification</td>
-<td>14</td>
-<td>Reading Period</td>
-</tr>
-<tr class="even">
-<td></td>
-<td><strong>Fall Break</strong></td>
-<td>15</td>
-<td>Presentations</td>
-</tr>
-</tbody>
-</table>
-</div>
+
 
 
 
@@ -603,6 +400,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

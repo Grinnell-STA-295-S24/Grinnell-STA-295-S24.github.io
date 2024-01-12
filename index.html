@@ -11,9 +11,10 @@
 
 
 
-<title>Math 243: Statistical Learning. Fall 2021</title>
+<title>STA 295: Statistical Learning. Spring 2024</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -59,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +85,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -295,12 +300,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -308,7 +313,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -350,7 +355,8 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Math 243: Statistical Learning. Fall 2021</h1>
+<h1 class="title toc-ignore">STA 295: Statistical Learning. Spring
+2024</h1>
 
 </div>
 
@@ -358,17 +364,18 @@ div.tocify {
 <p style="text-align:center;">
 <img    src ="img/bvtradeoff.png" alt = "logo" title="stat learning" width = "300"   />
 </p>
-<p>Welcome to the course website for Math 243, Fall 2021!</p>
-<p>Here you can find a course syllabus, announcements, the schedule, homework assignments, and information about projects and exams. Check back frequently for updates.</p>
+<p>Welcome to the course website for STA 295, Spring 2024!</p>
+<p>Here you can find a course syllabus, announcements, the schedule,
+homework assignments, and information about projects and exams. Check
+back frequently for updates.</p>
 <hr />
 <p><img align="left"  src="img/wells-jonathan.jpg" width = "200" style = "margin:0px 50px"></p>
-<p><strong>Instructor</strong>: Jonathan “Nate” Wells</p>
-<p><strong>Email</strong>: <a href="mailto:wellsj@reed.edu" class="email">wellsj@reed.edu</a></p>
-<p><strong>Classroom</strong>: Library 389, MWF 9 - 9:50am</p>
-<p><strong>Office</strong>: Library 392</p>
-<p><strong>In-person Office Hours</strong>: M 3-4pm, W 10-11am, F 10-11am</p>
-<p><strong>Virtual Office Hours</strong>: T 2-3pm</p>
-<p><strong>Zoom Link</strong>: <a href="https://zoom.us/my/wellsj392" class="uri">https://zoom.us/my/wellsj392</a></p>
+<p><strong>Instructor</strong>: Jonathan Wells</p>
+<p><strong>Email</strong>: <a href="mailto:wellsjon@grinnell.edu"
+class="email">wellsjon@grinnell.edu</a></p>
+<p><strong>Classroom</strong>: Noyce 2401, TTh 2:30-3:50 PM</p>
+<p><strong>Office</strong>: Noyce 2249</p>
+<p><strong>Office Hours</strong>: TBA</p>
 
 
 
@@ -408,6 +415,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
