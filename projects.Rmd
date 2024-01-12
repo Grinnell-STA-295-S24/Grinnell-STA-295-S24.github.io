@@ -1,0 +1,10 @@
+---
+title: "Projects"
+---
+
+## Overview
+One of the most important functions of the working statistician is to investigate and answer significant research questions by analyzing real-world data, using a variety of elementary and advanced modeling techniques, and to distill the results into reports that are accessible to the non-statistician. 
+
+You will work in small groups to research a topic of interest to you, and then summarize your results in a short presentation to the class and as well as a technical report submitted to the instructor.
+
+More details about this project will be given later in the semester.

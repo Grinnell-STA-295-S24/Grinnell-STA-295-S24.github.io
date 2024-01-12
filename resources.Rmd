@@ -1,0 +1,56 @@
+---
+title: "Resources"
+---
+
+A list of helpful resources.
+
+  
+## R and RStudio
+
+Chester Ismay's [Getting Used to R, RStudio, and RMarkdown](https://ismayc.github.io/rbasics-book/index.html) is a helpful introduction extending beyond the discussion in ModernDive.
+
+Hadley Wickham's [R for Data Science](https://r4ds.had.co.nz/introduction.html) and Garrrett Grolemund's [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) are helpful resources for advanced data wrangling and R programming, respectively.
+
+The [Cookbook for R](http://www.cookbook-r.com/) and the [R Graphics Cookbook](https://r-graphics.org/) are good in-depth references for the fundamentals of R and ggplot2. They are especially helpful if you are trying to look-up how to code some particular task
+
+For quick reference, RStudio publishes several cheatsheets, like the [Visualization Cheatsheet (ggplot2)](http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf) and the [Data Wrangling Cheatsheet (dplyr)](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+You may find it helpful to install R and RStudio locally. This [tutorial](http://www.reed.edu/data-at-reed/software/R/r_studio.html) will guide you through the process.
+
+Several helpful tutorials are available on the [Stat2Labs page](https://stat2labs.sites.grinnell.edu/RTutorials.html). 
+
+### DataCamp
+
+Students STA 295 are given a semester-long subscription to [DataCamp](https://www.datacamp.com/), an online learning platform with videos and interactive lessons for coding and data science skills. A link to enroll in our class group will be sent to your Grinnell email address, which will give you free access to all DataCamp courses and modules through June 30th, 2024. The following DataCamp courses are highly recommended:
+
+1. [Introduction to R](https://app.datacamp.com/learn/courses/free-introduction-to-r)
+2. [Introduction to the Tidyverse](https://app.datacamp.com/learn/courses/introduction-to-the-tidyverse)
+3. [Reporting with R Markdown](https://app.datacamp.com/learn/courses/reporting-with-rmarkdown)
+4. [Introduction to Data Visualization with ggplot2](https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2)
+5. [Github Concepts](https://app.datacamp.com/learn/courses/github-concepts)
+
+
+
+## GitHub
+
+Instructions for working with Git and GitHub using the RStudio IDE, along with advice for a productive Git workflow:
+
+[Happy Git and GitHub for the useR](http://happygitwithr.com/)
+
+
+
+## Help and Tutoring
+
+###  DASIL
+
+The [Data Science and Social Inquiry Lab (DASIL)](https://www.grinnell.edu/academics/resources/data-inquiry-lab) in HSSC S1310 is staffed by mentors who are experienced in R programming and may be able to troubleshoot coding problems you are having.
+
+
+
+### Instructor Office Hours
+ 
+You are strongly encouraged to attend your instructor's office hours each week. You are welcome to come either with specific questions, or just with general uncertainties about content we've discussed. If you are unable to attend scheduled office hours, please email Jonathan (wellsjon@grinnell.edu) to schedule an alternative appointment.
+
+### Mentor Sessions
+ 
+Each week, our course mentor will offer an in-person help session, during which time you can stop by with questions about course material or assignments. A schedule for mentor sessions will be made avaialable after the start of the term.

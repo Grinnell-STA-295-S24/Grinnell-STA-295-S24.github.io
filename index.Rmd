@@ -1,0 +1,24 @@
+---
+title: "STA 295: Statistical Learning. Spring 2024"
+---
+
+<p style="text-align:center;">  <img    src ="img/bvtradeoff.png" alt = "logo" title="stat learning" width = "300"   />  </p>
+Welcome to the course website for STA 295, Spring 2024! 
+
+Here you can find a course syllabus, announcements, the schedule, homework assignments, and information about projects and exams. Check back frequently for updates.
+
+
+****************************************
+
+
+<img align="left"  src="img/wells-jonathan.jpg" width = "200" style = "margin:0px 50px">
+
+**Instructor**: Jonathan Wells
+
+**Email**: <wellsjon@grinnell.edu>
+
+**Classroom**: Noyce 2401, TTh 2:30-3:50 PM
+
+**Office**: Noyce 2249
+
+**Office Hours**: TBA
