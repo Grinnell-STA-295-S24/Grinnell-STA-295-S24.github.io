@@ -5,6 +5,6 @@ title: "Homework"
 A weekly problem set will be made available after class on Tuesday, due before the start of class on the following Tuesday Some time each week will be devoted to collaborative coding components of the assignment. Problem sets must be completed as a .Rmd file in RStudio and submitted via GitHub. 
 
 
-## Instructions for Submitting Homework
+## Submission Instructions
 
  
