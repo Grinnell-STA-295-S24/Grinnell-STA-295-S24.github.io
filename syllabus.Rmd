@@ -2,3 +2,225 @@
 title: "Syllabus"
 ---
 
+---
+title: "Syllabus STA 295 Spring 2024"
+output: pdf_document
+---
+
+## Contact Information
+
+**Instructor**: Jonathan Wells
+
+**Email**: <wellsjon@grinnell.edu>
+
+**Classroom**: Noyce 2401
+
+**Office**: Noyce 2249
+
+**Office Hours**: TBA
+
+
+
+*********************************************
+
+## Course Information
+
+### Course Description
+
+This course is an overview of modern approaches to analyzing and modeling large multivariate data sets across a variety of fields. Theory and implementation for common predictive techniques will be covered, including linear, penalized, and logistic regression, tree-based models, and ensemble models. Framework for model assessment, including the bias-variance trade-off, train-testing splits, and resampling methods, will be discussed. This course will make extensive use of the R programming language.
+
+**Prerequisites**: STA 209, or Instructor Consent.
+
+ 
+### Textbook
+
+Primary Textbook:
+
+-  *An Introduction to Statistical Learning*, 2nd Edition (2021) by James, Witten, Hastie, and Tibshirani. (A .pdf copy of the text is available free of charge on the author's website <https://www.statlearning.com/>)
+
+Secondary Textbooks 
+
+- *Applied Predictive Modeling*, 1st Edition by Kuhn and Johnson.
+
+- *Tidy Modeling with R*, 1st Edition by Kuhn and Silge
+
+### Course Resources
+
+The following web-based resources will be used for communicating class information:
+
+- Course Website <https://grinnell-sta-295-s24.github.io/> (*announcements, documents, schedule, assignments*)
+
+- GitHub Classroom <https://classroom.github.com/classrooms/156477932-sta-295-s24> (*homework submission*).
+
+
+### Technology
+
+You are encouraged to bring a personal computer to class each day for notetaking and live coding. Access to a computer with webbrowser will be required for homework completion and submission. 
+
+We will make frequent use of the R programming language to perform calculations, sample random variables, and create probability models. Both R (the programming language) and RStudio (an editor and UI) are free to use, and can be accessed three ways:
+
+- Through the cloud on the Grinnell RStudio Server: <https://rstudio.grinnell.edu/>
+
+- On a classroom or library computer
+
+- On your own computer by downloading R (<http://www.r-project.org/>) and RStudio (<http://www.rstudio.com/>)
+
+
+Throughout the term, we will use GitHub to manage and submit assignments. GitHub is a hosting service to house Git-based projects online, and is designed to assist with version control and collaboration on big projects. <https://github.com/>
+
+### Communication
+
+If you would like to contact me, I can most easily be reached via email weekdays between 8am and 6pm. While I try to answer emails as soon as possible, in some cases, I may not be able to respond until the following school day. If you'd prefer to talk live, send me an email and we can schedule a time to chat on WebEx or Teams. 
+
+### Office Hourse
+
+You are free and encouraged to attend any scheduled office hours without prior appointment. These are times I have specifically set aside for answering questions, discussing class material, and helping with other college business. If you have a matter you'd prefer to discuss one-on-one, or if none of the scheduled times fit your schedule, please email me and we can arrangement another time to meet. On very rare occasions, I may need to reschedule office hours due to illness or other unavoidable conflict, and in these cases, I will notify the class via email.
+
+*********************************************
+
+## Course Outcomes
+
+By the end of the course, a student should be able to:
+
+- Articulate and compare the different philosophical approaches to prediction, statistical inference, classification, and clustering.
+
+- Create valid statistical models, perform data analysis using software, and communicate results in non-technical language using reproducible methods in order to answer a particular research question.
+
+- Implement simulation and randomization algorithms in order to demonstrate and assess properties of statistical models.
+
+- Assess and compare the performance of a variety of statistical models, and select appropriate models according to suitable criteria.
+
+- Apply statistical learning techniques to real-world data and problems.
+
+- Justify and describe properties of particular statistical learning methods by appealing to appropriate theory.
+
+- Use the R programming language to perform exploratory data analysis, create statistical models, and analyze model results.
+
+- Create and share reproducible reports using RMarkdown that include code, prose, and output
+
+- Implement version control and perform data analysis project management, using Git / Github 
+
+*********************************************
+
+## Course Format
+
+
+A typical class day will involve the following:
+
+- *Reading Assignment*. Every class will have an assigned reading which should be completed prior to the start of class. 
+
+- *Active Lectures*. Our 80-minute class meetings will include an interactive lecture by the instructor, with some time devoted to discussion either class-wide or in small groups.
+
+- *Group Work*. Typically during each class period, a portion class time will be reserved for collaborative coding and group work with your peers. 
+
+### Workload
+
+A prepared student will attend class for 80 minutes per day, twice each week, and spend about three to four hours per day of class on work outside the classroom (reading, doing homework, working on projects, discussing, studying, etc.).  Together, this represents a 9 - 11  hour per week commitment. 
+
+
+*********************************************
+
+## Grading Criteria
+
+Your grade in the class will be determined by your proficiency in each of the *Course Outcomes*, as demonstrated in the following assessments:
+
+1. Daily Reading 5%
+2. Homework 35%
+3. Participation 10%
+4. Exams 25% (12.5% each)
+5. Final Project 25%
+
+Letter grades will be assigned based on the following course percentages (with upper and lower $2\%$ of each division corresponding to $+ / -$, respectively).
+
+- A: $90 - 100\%$
+- B: $80 - 89\%$
+- C: $70 - 79\%$
+- D: $60 - 69\%$
+- F: $< 60\%$
+
+### Daily Reading
+
+Statistical intuition takes time to develop, and understanding deepens upon revisiting a concept a $2^\text{nd}$, $3^\text{rd}$, or $n^\text{th}$ time. Studying basic terminology and elementary examples in the textbook before class means that class can be spent clarifying and expanding ideas, rather than introducing them. Daily reading assignments will be posted on our course webpage, and will list the specific section(s) to read for each day, along with a response question to be completed by 1pm each day of class (to give me time to review them before class). Responses should be posted as an `Issue` on the `daily-reading` repository of our Github organization. The questions are not intended to be overly difficult, but should help both you and I highlight topics that need further review. Responses will be assessed primarily on the basis of completion. No extensions on daily readings will be given, but up to three assignments may be missed without penalty. 
+
+### Homework
+
+A weekly problem set will be made available after class on Tuesday, due by 11:59pm the following Tuesday. Problem sets must be completed as a .Rmd file in RStudio and submitted via GitHub. Detailed submission instructions can be found on the [course webpage](https://grinnell-statistics.github.io/sta-295-s24/homework.html). Up to two times throughout the term, you may request up to a 5 day extension on your assignment. Except in extraordinary circumstances, requests must be made prior to an assignment's due date.
+
+### Participation
+
+The ability to immediately interrogate your beliefs and understanding through dialogue sets a live class apart from more passive means of education. For this reason, you are expected to attend class regularly and to actively participate by asking questions, responding to questions, and engaging in class discussion. 
+
+If you are unable to attend class, you should notify the instructor before class (or promptly after, if that's not possible). You are responsible for independently catching up on the material missed, which you can do by:
+
+- Checking the schedule page of the course website for important announcements.
+- Reviewing the lecture slides posted on the course website.
+- Reading the assigned textbook section.
+- Attending office hours to ask questions about the material.
+
+**Typically, you may miss up to two classes without penalty. However, prolonged or recurring illness, as well as other emergencies, may require individual adjustment, in which case you should contact the instructor as soon as possible to make appropriate arrangements.**
+
+
+### Midterm Exams
+
+Two midterm exams will be given during the term. This exams will have both an oral and a take-home component. The take-home exams will be distributed on the dates below, and will be due the following Tuesday.
+
+1. Midterm Exam 1: Tuesday, March 5th (Week 7)
+2. Midterm Exam 2: Tuesday, April 16th (Week 11)
+
+The oral exams will be individually scheduled during the week of the take-home exam. No homework will be due on the day the take-home exam is due.
+
+
+### Final Project
+
+Throughout the second half of the term, you will work in groups of 2 or 3 on a project that answers a significant research question using real-world data, by implementing the fundamental techniques developed in our class, as well as some more advanced methods from supplementary sources. The project will culminate in a 20 minute presentation during finals week and a 4-8 page reproducible technical report.
+
+
+********************************************
+
+## Community Information
+
+### Accessibility
+
+Grinnell College is committed to creating inclusive and accommodating learning environments. Please notify me as soon as possible if there are aspects of the instruction or design of this course that result in barriers to your participation. I also encourage you to have a conversation about and provide documentation of your disability to the Coordinator for Student Disability Resources, Jae Hirschman, located on the 1st floor of Steiner Hall(x3089). If you have already been approved for accommodations, please have Disability Resources provide a letter during the first week of classes, or as soon as possible after approval. I will then contact you to schedule a meeting during which we can discuss the particular implementation of your accommodations. 
+
+### Religious Observance
+
+Grinnell College offers alternative options to complete academic work for studnets who observe religious holy days. Please contact me within the first three weeks of the semester if you would like to discuss how to meet the terms of your religious observance and also the requirements for this course.
+
+### Academic Integrity
+
+Students are allowed and encouraged to collaborate on most in-class and homework assignments. However, any work that you turn in for grading must be your own. If you collaborate on homework, you should clearly indicate the names of your collaborators on the first page of your assignment.
+
+You are welcome to use other paper or internet resources to supplement content we cover in this course; however, with the exception of existing solutions to homework or exam problems. Copying or paraphrasing solutions from the internet or other sources is an example of academic dishonesty. Exams will explicitly mention what resources may be consulted. All written work that references material outside of the textbook or lecture should be accompanied by an appropriate citation.
+
+### Code of Conduct
+
+I expect all members of the class to make participation a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+I expect everyone to act and interact in ways that contribute to an open, welcoming diverse, inclusive, and healthy community of learners. Examples of unacceptable behavior include: using sexualized language or imagery, making insulting or derogatory comments, harassing someone publicly or privately, monopolizing discussion or otherwise preventing others from meaningfully participating. Instead you can contribute to a positive learning environment by demonstrating empathy and kindness, being respectful of differing viewpoints and experiences, giving and gracefully accepting constructive feedback, and making space for everyone to contribute.
+
+### Assignment Feedback
+
+You will receive timely feedback on your homework via GitHub, either from me or the course grader (another Grinnell undergraduate). You are strongly encouraged to review comments on your solutions and rework missed problems. Each homework problem will be graded out seven points, with five points for statistical content, and two points for the quality of writing and clarity of code. A general rubric for each problem is printed below.
+
+### Help
+
+I strongly encourage you to attend my office hours each week. You are welcome to come either with specific questions, or just with general uncertainties about content we've discussed. If you are unable to attend scheduled office hours, please email me to schedule an alternative appointment (either in-person or virtual).
+
+The [Data Science and Social Inquiry Lab (DASIL)](https://www.grinnell.edu/academics/resources/data-inquiry-lab) in HSSC S1310 is staffed by mentors who are experienced in R programming and may be able to troubleshoot coding problems you are having.
+
+********************************************
+
+## Tentative Schedule
+*This is the schedule as of Day 1. A more up-to-date schedule can be found [here](https://grinnell-statistics.github.io/sta-295-s24/schedule.html).*
+
+| Week  |  Sections Covered |  Week  | Sections Covered  |
+|---|---|---|---|
+|  1 | Intro to R and GitHub                 |     | **Spring Break**   |
+|  2 | Foundations                           |  9  | Tree-Based Models |
+|  3 | Linear Models                         |  10 | Tree-Based Models  |
+|  4 | Resampling Methods                    |  11 | SVM  |
+|  5 | Model Selection                       |  12 | TidyModels (Exam 2) |
+|  6 | Beyond Linear Models                  |  13 | Ensemble Models  |
+|  7 | Classification (Exam 1)               |  14 | Project Work  |
+|  8 | Classification                        |  15 | Finals Week; Presentations  |
