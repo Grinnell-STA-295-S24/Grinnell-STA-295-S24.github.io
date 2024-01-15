@@ -148,7 +148,7 @@ A weekly problem set will be made available after class on Tuesday, due by 11:59
 
 The ability to immediately interrogate your beliefs and understanding through dialogue sets a live class apart from more passive means of education. For this reason, you are expected to attend class regularly and to actively participate by asking questions, responding to questions, and engaging in class discussion and collaborative coding.
 
-Your participation score may be lowered for use of a phone, tablet or computer for non-class activities during class time, particularly if this behavior is disruptive to others in the classroom. It may also be lowered for failure to abide by the class [Code of Conduct](https://grinnell-sta-295-s24.github.io/syllabus.html). 
+Your participation score may be lowered for use of a phone, tablet or computer for non-class activities during class time, particularly if this behavior is disruptive to others in the classroom. It may also be lowered for failure to abide by the class [Code of Conduct](https://grinnell-sta-295-s24.github.io/syllabus.html#Code_of_Conduct). 
 
 If you are unable to attend class, you should notify the instructor before class (or promptly after, if that's not possible). You are responsible for independently catching up on the material missed, which you can do by:
 
