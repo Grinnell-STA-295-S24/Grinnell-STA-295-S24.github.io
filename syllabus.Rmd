@@ -2,10 +2,6 @@
 title: "Syllabus"
 ---
 
----
-title: "Syllabus STA 295 Spring 2024"
-output: pdf_document
----
 
 ## Contact Information
 
@@ -14,6 +10,8 @@ output: pdf_document
 **Email**: <wellsjon@grinnell.edu>
 
 **Classroom**: Noyce 2401
+
+**Class Time**: T/Th 2:30 - 3:50pm
 
 **Office**: Noyce 2249
 
@@ -125,10 +123,10 @@ A prepared student will attend class for 80 minutes per day, twice each week, an
 Your grade in the class will be determined by your proficiency in each of the *Course Outcomes*, as demonstrated in the following assessments:
 
 1. Daily Reading 5%
-2. Homework 35%
+2. Homework 40%
 3. Participation 10%
-4. Exams 25% (12.5% each)
-5. Final Project 25%
+4. Code Review 15%
+5. Final Project 30%
 
 Letter grades will be assigned based on the following course percentages (with upper and lower $2\%$ of each division corresponding to $+ / -$, respectively).
 
@@ -140,15 +138,17 @@ Letter grades will be assigned based on the following course percentages (with u
 
 ### Daily Reading
 
-Statistical intuition takes time to develop, and understanding deepens upon revisiting a concept a $2^\text{nd}$, $3^\text{rd}$, or $n^\text{th}$ time. Studying basic terminology and elementary examples in the textbook before class means that class can be spent clarifying and expanding ideas, rather than introducing them. Daily reading assignments will be posted on our course webpage, and will list the specific section(s) to read for each day, along with a response question to be completed by 1pm each day of class (to give me time to review them before class). Responses should be posted as an `Issue` on the `daily-reading` repository of our Github organization. The questions are not intended to be overly difficult, but should help both you and I highlight topics that need further review. Responses will be assessed primarily on the basis of completion. No extensions on daily readings will be given, but up to three assignments may be missed without penalty. 
+Daily reading assignments will be posted on our course webpage, and will list the specific section(s) to read for each day, along with a response question to be completed by 1pm each day of class (to give me time to review them before class). Responses should be posted as an `Issue` on the `daily-reading` repository of our Github organization. The questions are not intended to be overly difficult, but should help both you and I highlight topics that need further review. Responses will be assessed primarily on the basis of completion. No extensions on daily readings will be given, but up to three assignments may be missed without penalty. 
 
 ### Homework
 
-A weekly problem set will be made available after class on Tuesday, due by 11:59pm the following Tuesday. Problem sets must be completed as a .Rmd file in RStudio and submitted via GitHub. Detailed submission instructions can be found on the [course webpage](https://grinnell-statistics.github.io/sta-295-s24/homework.html). Up to two times throughout the term, you may request up to a 5 day extension on your assignment. Except in extraordinary circumstances, requests must be made prior to an assignment's due date.
+A weekly problem set will be made available after class on Tuesday, due by 11:59pm the following Tuesday. Problem sets must be completed as a .Rmd file in RStudio and submitted via GitHub. Detailed submission instructions can be found on the [course webpage](https://grinnell-sta-295-s24.github.io/homework.html). Up to two times throughout the term, you may request up to a 5 day extension on your assignment. Except in extraordinary circumstances, requests must be made prior to an assignment's due date.
 
 ### Participation
 
-The ability to immediately interrogate your beliefs and understanding through dialogue sets a live class apart from more passive means of education. For this reason, you are expected to attend class regularly and to actively participate by asking questions, responding to questions, and engaging in class discussion. 
+The ability to immediately interrogate your beliefs and understanding through dialogue sets a live class apart from more passive means of education. For this reason, you are expected to attend class regularly and to actively participate by asking questions, responding to questions, and engaging in class discussion and collaborative coding.
+
+Your participation score may be lowered for use of a phone, tablet or computer for non-class activities during class time, particularly if this behavior is disruptive to others in the classroom. It may also be lowered for failure to abide by the class [Code of Conduct](https://grinnell-sta-295-s24.github.io/syllabus.html). 
 
 If you are unable to attend class, you should notify the instructor before class (or promptly after, if that's not possible). You are responsible for independently catching up on the material missed, which you can do by:
 
@@ -160,15 +160,13 @@ If you are unable to attend class, you should notify the instructor before class
 **Typically, you may miss up to two classes without penalty. However, prolonged or recurring illness, as well as other emergencies, may require individual adjustment, in which case you should contact the instructor as soon as possible to make appropriate arrangements.**
 
 
-### Midterm Exams
+### Code Review
 
-Two midterm exams will be given during the term. This exams will have both an oral and a take-home component. The take-home exams will be distributed on the dates below, and will be due the following Tuesday.
+Twice throughout the term, students will schedule an individual meeting with the instructor to review code the student submitted on a recent assignment, as well as discuss conceptual questions related to the topics covered in class.
 
-1. Midterm Exam 1: Tuesday, March 5th (Week 7)
-2. Midterm Exam 2: Tuesday, April 16th (Week 11)
+Each meeting will last approximately 20 minutes.
 
-The oral exams will be individually scheduled during the week of the take-home exam. No homework will be due on the day the take-home exam is due.
-
+The first review will take place during week 7 (3/4 - 3/8) or week 8 (3/11 - 3/15), and the second review will take place during week 11 (4/15 - 4/19) or week 12 (4/22 - 4/26).
 
 ### Final Project
 
@@ -181,7 +179,7 @@ Throughout the second half of the term, you will work in groups of 2 or 3 on a p
 
 ### Accessibility
 
-Grinnell College is committed to creating inclusive and accommodating learning environments. Please notify me as soon as possible if there are aspects of the instruction or design of this course that result in barriers to your participation. I also encourage you to have a conversation about and provide documentation of your disability to the Coordinator for Student Disability Resources, Jae Hirschman, located on the 1st floor of Steiner Hall(x3089). If you have already been approved for accommodations, please have Disability Resources provide a letter during the first week of classes, or as soon as possible after approval. I will then contact you to schedule a meeting during which we can discuss the particular implementation of your accommodations. 
+Grinnell College is committed to creating inclusive and accommodating learning environments. Please notify me as soon as possible if there are aspects of the instruction or design of this course that result in barriers to your participation. I also encourage you to have a conversation about and provide documentation of your disability to the Coordinator for Student Disability Resources, Jae Baldree <baldreej@grinnell.edu>. If you have already been approved for accommodations, please have Disability Resources provide a letter during the first week of classes, or as soon as possible after approval. I will then contact you to schedule a meeting during which we can discuss the particular implementation of your accommodations. 
 
 ### Religious Observance
 
@@ -191,7 +189,9 @@ Grinnell College offers alternative options to complete academic work for studne
 
 Students are allowed and encouraged to collaborate on most in-class and homework assignments. However, any work that you turn in for grading must be your own. If you collaborate on homework, you should clearly indicate the names of your collaborators on the first page of your assignment.
 
-You are welcome to use other paper or internet resources to supplement content we cover in this course; however, with the exception of existing solutions to homework or exam problems. Copying or paraphrasing solutions from the internet or other sources is an example of academic dishonesty. Exams will explicitly mention what resources may be consulted. All written work that references material outside of the textbook or lecture should be accompanied by an appropriate citation.
+You are welcome to use other paper or internet resources to supplement content we cover in this course; however, with the exception of existing solutions to homeworkproblems. Copying or paraphrasing solutions from the internet or other sources is an example of academic dishonesty. 
+
+All written work that references material outside of the textbook or lecture should be accompanied by an appropriate citation. **Because ChatGPT and other generative text models do no currently provide direct citations for sources used to generate responses, they should not be used when composing homework, project, or other class assignments.**
 
 ### Code of Conduct
 
@@ -220,7 +220,7 @@ The [Data Science and Social Inquiry Lab (DASIL)](https://www.grinnell.edu/acade
 |  2 | Foundations                           |  9  | Tree-Based Models |
 |  3 | Linear Models                         |  10 | Tree-Based Models  |
 |  4 | Resampling Methods                    |  11 | SVM  |
-|  5 | Model Selection                       |  12 | TidyModels (Exam 2) |
+|  5 | Model Selection                       |  12 | TidyModels  |
 |  6 | Beyond Linear Models                  |  13 | Ensemble Models  |
-|  7 | Classification (Exam 1)               |  14 | Project Work  |
+|  7 | Classification                        |  14 | Project Work  |
 |  8 | Classification                        |  15 | Finals Week; Presentations  |
