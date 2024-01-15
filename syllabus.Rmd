@@ -216,11 +216,11 @@ The [Data Science and Social Inquiry Lab (DASIL)](https://www.grinnell.edu/acade
 
 | Week  |  Sections Covered |  Week  | Sections Covered  |
 |---|---|---|---|
-|  1 | Intro to R and GitHub                 |     | **Spring Break**   |
-|  2 | Foundations                           |  9  | Tree-Based Models |
-|  3 | Linear Models                         |  10 | Tree-Based Models  |
-|  4 | Resampling Methods                    |  11 | SVM  |
-|  5 | Model Selection                       |  12 | TidyModels  |
-|  6 | Beyond Linear Models                  |  13 | Ensemble Models  |
-|  7 | Classification                        |  14 | Project Work  |
-|  8 | Classification                        |  15 | Finals Week; Presentations  |
+|  1 | Intro to R                          |     | **Spring Break**   |
+|  2 | Foundations                           |  9  | Classification |
+|  3 | KNN, Linear Models                         |  10 | Tree-Based Models  |
+|  4 | Extending Linear Models                   |  11 | Tree-Based Models  |
+|  5 | Resampling Methods                         |  12 | SVM  |
+|  6 | Model Selection                           |  13 | Ensemble Models  |
+|  7 | Penalized Regression                       |  14 | Project Work  |
+|  8 | Beyond Linear Models                        |  15 | Finals Week; Presentations  |
