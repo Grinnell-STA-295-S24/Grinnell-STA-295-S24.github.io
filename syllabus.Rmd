@@ -201,7 +201,7 @@ I expect everyone to act and interact in ways that contribute to an open, welcom
 
 ### Assignment Feedback
 
-You will receive timely feedback on your homework via GitHub, either from me or the course grader (another Grinnell undergraduate). You are strongly encouraged to review comments on your solutions and rework missed problems. Each homework problem will be graded out seven points, with five points for statistical content, and two points for the quality of writing and clarity of code. A general rubric for each problem is printed below.
+You will receive timely feedback on your homework via GitHub, either from me or the course grader (another Grinnell undergraduate). You are strongly encouraged to review comments on your solutions and rework missed problems. Each homework problem will be graded out seven points, with five points for statistical content, and two points for the quality of writing and clarity of code. A general rubric for each problem can be found on the [Homework](https://grinnell-sta-295-s24.github.io/homework.html) page.
 
 ### Help
 
