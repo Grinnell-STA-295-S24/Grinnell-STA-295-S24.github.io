@@ -23,10 +23,11 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 #### Due
 (These tasks should be completed before the start of class on Tuesday)
 
+- Complete the pre-class survey (link in the Welcome email sent to your Grinnell email address)
 
-- Complete the pre-class survey (sent to your Grinnell email address)
+- Read [Chapter 1](https://happygitwithr.com/big-picture.html) and [Chapter 4](https://happygitwithr.com/github-acct.html) in [Happy Git and GitHub for the useR](https://happygitwithr.com/)
 
-- Read [Chapter 1](https://happygitwithr.com/big-picture.html) and [Chapter 4](https://happygitwithr.com/github-acct.html)
+- Create a [GitHub](https://github.com/) account (if you don't already have one)
 
 
 ### Thursday 1-25
