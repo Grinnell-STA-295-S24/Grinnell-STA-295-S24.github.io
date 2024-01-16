@@ -1,0 +1,12 @@
+---
+title: "Code Review"
+---
+
+Twice throughout the term, students will schedule an individual meeting with the instructor to review code the student submitted on a recent assignment, as well as discuss conceptual questions related to the topics covered in class.
+
+Each meeting will last approximately 20 minutes.
+
+The first review will take place during week 7 (3/4 - 3/8) or week 8 (3/11 - 3/15), and the second review will take place during week 11 (4/15 - 4/19) or week 12 (4/22 - 4/26).
+
+More details about these reviews will be given later in the term.
+

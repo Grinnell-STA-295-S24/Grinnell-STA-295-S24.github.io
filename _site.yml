@@ -1,4 +1,4 @@
-name: "Reed Math 243 Fall 2021"
+name: "Grinnell STA 295 Spring 24"
 navbar:
   title: "Statistical Learning"
   left:
@@ -12,8 +12,8 @@ navbar:
       href: homework.html
     - text: "Projects"
       href: projects.html
-    - text: "Exams"
-      href: exams.html
+    - text: "Code Review"
+      href: code_review.html
     - text: "Resources"
       href: resources.html
 output:
