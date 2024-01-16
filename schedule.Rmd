@@ -4,3 +4,43 @@ title: "Schedule"
 
 
 This page contains an in-depth daily schedule for our STA 295 course. Be sure to check back frequently for updates.
+
+
+## Week 1
+
+### Tuesday 1-23
+
+
+#### Topics
+
+- Course Logistics & [Syllabus](https://grinnell-sta-295-s24.github.io/syllabus.html)
+- What is Statistical Learning?
+- Intro to RStudio
+- Version Control with Git and GitHub
+
+
+
+#### Due
+(These tasks should be completed before the start of class on Tuesday)
+
+
+- Complete the pre-class survey (sent to your Grinnell email address)
+
+- Read [Chapter 1](https://happygitwithr.com/big-picture.html) and [Chapter 4](https://happygitwithr.com/github-acct.html)
+
+
+### Thursday 1-25
+
+
+#### Topics
+
+- Coding in R
+- Fundamentals of Statistical Learning
+
+
+
+#### Due
+(These tasks should be completed before the start of class on Thursday)
+
+
+- Complete the [Introduction to R](https://app.datacamp.com/learn/courses/free-introduction-to-r) DataCamp course module
