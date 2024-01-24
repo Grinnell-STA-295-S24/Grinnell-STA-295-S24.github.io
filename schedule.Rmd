@@ -39,9 +39,12 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 #### Topics
 
-- Coding in R
-- Fundamentals of Statistical Learning
+- Version Control with Git and GitHub
+  - [Working Solo with Github Activity](files/working_solo_github.pdf)
 
+- Coding in R/RStudio
+
+- Fundamentals of Statistical Learning
 
 
 #### Due
