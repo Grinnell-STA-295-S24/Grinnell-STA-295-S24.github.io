@@ -36,6 +36,7 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 ### Thursday 1-25
 
+[Lecture Notes](lecture_notes/1_25_Practice_with_Git.pdf)
 
 #### Topics
 
@@ -43,8 +44,8 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
   - [Working Solo with Github Activity](files/working_solo_github.pdf)
 
 - Coding in R/RStudio
+  -[Coding in R Activity](files/coding_in_R.pdf)
 
-- Fundamentals of Statistical Learning
 
 
 #### Due
