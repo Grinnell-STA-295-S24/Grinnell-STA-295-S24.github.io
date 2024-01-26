@@ -43,8 +43,9 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 - Version Control with Git and GitHub
   - [Working Solo with Github Activity](files/working_solo_github.pdf)
 
-- Coding in R/RStudio
-  -[Coding in R Activity](files/coding_in_R.pdf)
+- ~~~Coding in R/RStudio~~~
+
+  -~~~[Coding in R Activity](files/coding_in_R.pdf)~~~
 
 
 
