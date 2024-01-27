@@ -49,8 +49,9 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 
 
-#### Due
-(These tasks should be completed before the start of class on Thursday)
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
 
 
 - Complete the [Introduction to R](https://app.datacamp.com/learn/courses/free-introduction-to-r) DataCamp course module
@@ -67,18 +68,44 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 #### Topics
 
+
+- Foundations of Statistical Learning, Part 1
+
 - Coding in R/RStudio
 
   - [Coding in R Activity](files/coding_in_R.pdf)
   
-- Foundations of Statistical Learning
 
 
-#### Due
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
  
 - Read Section 2.1, as well as 2.3.1, 2.3.3 and 2.3.4 in [ISLR](https://www.statlearning.com/) 2e
 
+#### Due
 
-### Thursday 1-25
+- HW 1 due on Tuesday 1/30 at 11:59pm (Submit assignment by making a final push with all commits to your .Rmd and .pdf file to your copy of the hw_1 repo on github)
 
-TBA  
+
+### Thursday 2-1
+
+#### Topics
+
+
+- Foundations of Statistical Learning, Part 2
+
+- Creating Data Visualizations using `ggplot2`
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 2.2 in [ISLR](https://www.statlearning.com/) 2e
+
+- Complete this [tutorial](https://shiny.grinnell.edu/tutorial/5_ggplot2_MakingGraphs/#section-introduction) introducing the `ggplot2` graphics package.
