@@ -54,3 +54,31 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 
 - Complete the [Introduction to R](https://app.datacamp.com/learn/courses/free-introduction-to-r) DataCamp course module
+
+
+
+------------------------------------------------------
+
+## Week 2
+
+### Tuesday 1-30
+
+
+
+#### Topics
+
+- Coding in R/RStudio
+
+  - [Coding in R Activity](files/coding_in_R.pdf)
+  
+- Foundations of Statistical Learning
+
+
+#### Due
+ 
+- Read Section 2.1, as well as 2.3.1, 2.3.3 and 2.3.4 in [ISLR](https://www.statlearning.com/) 2e
+
+
+### Thursday 1-25
+
+TBA  
