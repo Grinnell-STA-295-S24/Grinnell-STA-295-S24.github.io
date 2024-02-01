@@ -91,6 +91,8 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 ### Thursday 2-1
 
+[Lecture Slides](lecture_notes/2_1_Foundations_II.pdf)
+
 #### Topics
 
 
