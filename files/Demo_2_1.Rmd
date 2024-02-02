@@ -1,0 +1,198 @@
+---
+title: "Demo_2_1"
+author: "Wells"
+date: "2024-02-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+The R language is built on objects called *vectors*.
+
+A vector is a list of similar-type objects (numbers, character strings, logicals)
+
+To make a vector, use the `c()` function
+
+The code below created a vector called `v` consisting of the numbers 10, 11, 12
+
+```{r}
+v <- c(10, 11, 12)
+
+v
+```
+
+Often, we want to create a vector of many consecutive integers. In this case, the : operator can be used.
+
+The code below creates a vector `x` consisting of the integers between 1 and 10.
+
+```{r}
+x <- 1:10
+
+x
+```
+
+If we instead have the larger number on the left of the : operator, we create a vector in descending order:
+
+```{r}
+y <- 10:1
+
+y
+```
+
+The `rep` function can be used to create with repeated elements.
+
+The following create a vector of ten 0's:
+
+```{r}
+z <- rep(0, 10)
+z
+```
+
+
+## The Matrix
+
+Matrices can be used to organize arrays of data.
+
+Build matrices using `matrix()`
+
+To do so, we supply a long vector, and then indicate how many rows and columns should be in the matrix.
+
+The code below uses the z vector from before to fill out a matrix 2x5 matrix of 0's
+
+```{r}
+matrix(z, nrow = 2, ncol = 5)
+```
+
+Although hard to tell with the z vector, the `matrix()` function fills in matrices top to bottom, left to right.  We can see this by supplying the x vector, which consisted of the integers 1 through 10.
+```{r}
+matrix(x, nrow = 2, ncol = 5)
+```
+
+If we instead want to fill in the matrix in "English reading order" (left to right, top to bottom), we add `byrow = TRUE` inside the `matrix` function.
+
+```{r}
+matrix(x, nrow = 2, ncol = 5, byrow = TRUE)
+```
+
+
+What happens if try to create a matrix which has more entries than the vector we supply?
+
+Note that the vector x has 10 entries, but a 2x6 matrix has 12 entries
+
+```{r}
+matrix(x, nrow = 2, ncol = 6)
+```
+We see that the first elements of the vector x are "recycled" and used again.
+
+We can use this to our advantage, if we quickly want to create a matrix consisting of a single number.
+
+In this case, we supply a vector with one element (namely 0), which then is recycled 10 times:
+```{r}
+matrix(0, nrow = 2, ncol = 5)
+```
+
+
+
+The Data Frame
+
+The entries of a matrix must all be of the same type (numbers, characters, logicals). However, statisticians often work with collections of variables that are mixed types.
+
+Data frames are collection of vectors, organized by columns.
+
+The following code takes the existing vectors x and y, and uses them as the columns of a data farme
+
+```{r}
+data.frame(x, y)
+```
+
+
+Data frames also give us the opportunity to relabel the columns, as below: 
+
+```{r}
+my_df <- data.frame(Check_this = x, Out  = y)
+my_df
+```
+
+We can retrieve columns using $ operator
+
+```{r}
+my_df$Check_this
+
+my_df$Out
+```
+
+
+
+We can access elements of a vector using square brackets, and the entry index. 
+
+The following code retrieves the 2nd element of the vector v (which is the number 11)
+
+```{r}
+v[2]
+```
+
+
+We can also retrieve multiple elements by inputing a vector of indices.
+
+For example, the following code retrieves the 1st and 2nd elements of v
+```{r}
+v[1:2]
+```
+
+Similarly, we can use square brackets o access elements of data frame. However, we need to specify both the row and column; the row is the first number, and the column is the second number. 
+
+This code accesses the entry in 3rd row and 2nd column
+
+```{r}
+my_df[3,2]
+```
+
+We can also get entire 3rd row, if we put a 3 in the row spot and leave the column spot blank.
+
+```{r}
+my_df[3,]
+```
+
+Similarly, we can get the entire second column if we leave the row spot blank, and put a 2 in the column spot.
+
+
+```{r}
+my_df[,2]
+```
+
+We can use logical operations like >, <, or == (equals) to specify conditions. If we apply these to a vector, we return a vector whose entries are TRUE if corresponding element of the original vector satisfy the condition, and FALSE otherwise.
+
+
+The following returns a vector of length 10 indicating which elements of x are greater than 5.
+
+
+```{r}
+the_logic <- x > 5
+the_logic
+```
+
+Note, we can also use logical vectors to access elements of another vector.
+
+The following returns the last 5 elements of x (since the last 5 elements of `the_logic` were TRUE)
+
+```{r}
+x[the_logic]
+```
+
+We can also access these elements directly, by typing the condition inside brackets.
+
+```{r}
+x[x>6]
+```
+
+
+
+Finally, we can determine which positions in original vector satisfied condition using the which function. Unlike above, this will return the index position, rather than the value in that position.
+
+```{r}
+which(v > 10)
+```
+
