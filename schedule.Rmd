@@ -115,3 +115,61 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 - Read Section 2.2 in [ISLR](https://www.statlearning.com/) 2e
 
 - Complete this [tutorial](https://shiny.grinnell.edu/tutorial/5_ggplot2_MakingGraphs/#section-introduction) introducing the `ggplot2` graphics package.
+
+------------------------------------------------------
+
+## Week 3
+
+### Tuesday 2-6
+
+
+
+#### Topics
+
+
+- Simple Linear Regression
+
+- Inference for Linear Models
+
+- Functions in R
+
+- Practice with `ggplot2`
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 3.1, along with Sub-sections 3.6.1, 3.6.2, and 3.6.7, in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+ 
+1. Give one example of a real-world *prediction* question that could be answered using a simple linear model. Then give an example of a real-world *inference* question that could be answered using a simple linear model.
+
+
+#### Due
+
+- HW 2 due on Tuesday 2/6 at 11:59pm
+
+
+### Thursday 2-8
+
+
+#### Topics
+
+
+- TBA
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- TBA
