@@ -122,7 +122,7 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 ### Tuesday 2-6
 
-
+[Lecture Notes](lecture_notes/2-6_SLR.pdf)
 
 #### Topics
 
