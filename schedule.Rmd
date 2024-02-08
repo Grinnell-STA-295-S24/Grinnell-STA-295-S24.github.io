@@ -157,6 +157,7 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 ### Thursday 2-8
 
+[Lecture Notes](lecture_notes/2-8_Model_Diagnostics.pdf)
 
 #### Topics
 
