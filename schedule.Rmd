@@ -163,14 +163,15 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 - Building Linear Models in R
 
-- Functions in R
-
-- Practice with `ggplot2`
-
 - Diagnosing Problems with Linear Models
+
+- Functions in R
   
+- Live code from class
 
-
+  - [.Rmd file](files/Live_Coding_2-8.Rmd)
+  
+  - [.html file](files/Live_Coding_2-8.html)
 
 #### Reading Assignment
 

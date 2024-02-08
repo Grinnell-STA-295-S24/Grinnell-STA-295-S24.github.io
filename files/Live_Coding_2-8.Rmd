@@ -1,0 +1,62 @@
+---
+title: "Live Coding 2-8"
+author: "Wells"
+date: "2024-02-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Building Functions in R
+
+R has built in functions like `mean()` and `sum()`
+
+```{r}
+x <- 1:10
+mean(x)
+sum(x)
+```
+
+Let's build a function which squares a number and adds 1: f(x) = x^2 +1.
+
+```{r}
+square_plus_1 <- function(pen){
+  pen^2+1
+}
+```
+
+```{r}
+square_plus_1(2)
+```
+
+What happens when we apply square_plus_1 to the vector x from above?
+
+```{r}
+square_plus_1(x)
+```
+
+Build functions to compute RSS
+$$
+RSS = \sum_{i=1}^n (y_i - \hat y_i)^2
+$$
+
+```{r}
+get_rss <- function(y, y_hat){
+  sum( (y - y_hat)^2 ) 
+}
+```
+
+
+
+```{r}
+y <- c(1,2,3)
+y_hat <- c(2,2, 0)
+```
+
+
+```{r}
+get_rss(y, y_hat)
+```
