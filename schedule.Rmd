@@ -188,3 +188,79 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
  
 1. Choose one of the 6 potential problems that can occur when fitting a linear regression model in Section 3.3.3. Explain what this problem is, why it represents a cause for concern, and how it might be corrected, using language that would be understandable to a non-statistical audience.
 
+
+
+------------------------------------------------------
+
+## Week 4
+
+### Tuesday 2-13
+
+
+
+#### Topics
+
+
+- Multilinear Models
+
+- Model Accuracy for Multilinear Models
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 3.2, along with Sub-sections 3.6.3, in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer **ONE** of the following two questions:
+ 
+1. Suppose we want to predict the value of $Y$ based on three variables $X_1, X_2, X_3$. In what ways is a single multiple regression model for $Y$ based on $X_1, X_2, X_3$ different from creating 3 separate simple regression models for $Y$ based on each of $X_1$, $X_2$ and $X_3$ individually.
+
+2. Give an intuitive explanation for why training $R^2$ will always increase as more predictors are added to a model, while the number of observations are held fixed. Then explain why adding more predictors will not necessarily lead to a more accurate model.
+
+
+#### Due
+
+- HW 3 due on Tuesday 2/13 at 11:59pm
+
+
+### Thursday 2-15
+
+
+
+#### Topics
+
+- Extending Multilinear Models
+
+  - Interaction Terms
+  
+  - Transformations
+  
+  - Qualitative Predictors
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Sub-Sections 3.3.1, 3.3.2, 3.6.4, 3.6.5, 3.6.6 in [ISLR](https://www.statlearning.com/) 2e
+
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+ 
+1. Give a real-world example of a response and pair of predictors that may have a *synergy* or interaction effect, and explain why we might expect this effect based on context. (Recall: an interaction occurs when the effect of one variable on the response is amplified or diminished as the values of the other variable change)
+
+
+
