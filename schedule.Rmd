@@ -205,7 +205,9 @@ This page contains an in-depth daily schedule for our STA 295 course. Be sure to
 
 - Model Accuracy for Multilinear Models
 
+- [3D scatterplot and regression plane](files/3d_scatterplot.html)
 
+- [3D Scatterplot for Debt vs Income and Balance](files/3d_Debt_scatter.html)
   
 
 

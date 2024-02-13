@@ -1,0 +1,69 @@
+---
+title: "3d Debt scatterplot"
+author: "Wells"
+date: "2/13/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F, message = F)
+```
+
+```{r}
+library(plotly)
+library(reshape2)
+```
+
+## Debt
+
+```{r}
+library(ISLR)
+debt_mod <- lm(Balance ~  Limit + Income, data = Credit)
+```
+
+```{r}
+#Graph Resolution (more important for more complex shapes)
+graph_reso <- 5
+
+#Setup Axis
+axis_x <- round(seq(min(Credit$Income), max(Credit$Income), length.out = 25), 0)
+axis_y <- round(seq(min(Credit$Limit), max(Credit$Limit), length.out = 25), 0)
+
+#Sample points
+lm_surface <- expand.grid(Income = axis_x, Limit = axis_y,KEEP.OUT.ATTRS = F)
+lm_surface$Balance <- predict.lm(debt_mod, newdata = lm_surface)
+lm_surface <- acast(lm_surface, Income ~ Limit, value.var = "Balance")
+axis_z <- seq(-4000, 4000, length.out = 25)
+```
+
+
+```{r}
+library(viridis)
+#hcolors=c("red","blue","green")[my_df$Species]
+hcolors = "red"
+my_plot <- plot_ly(Credit, 
+                     x = ~Income, 
+                     y = ~Limit, 
+                     z = ~Balance,
+                     #text = ~Species, 
+                     type = "scatter3d", 
+                     mode = "markers",
+                     colors = viridis_pal(option = "D"),
+                     marker = list(color = ~Balance, 
+                                   colorscale='Viridis', 
+                                   size=3)
+                   ) %>% 
+  layout(
+    title = "3D Plot",
+    showlegend = FALSE,
+    scene = list(
+      xaxis = list(title = "Income"),
+      yaxis = list(title = "Limit"),
+      zaxis = list(title = "Balance")
+    ))
+```
+
+```{r}
+my_plot
+```
+ 
