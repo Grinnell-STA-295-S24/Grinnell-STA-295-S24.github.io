@@ -265,4 +265,71 @@ Answer **ONE** of the following two questions:
 1. Give a real-world example of a response and pair of predictors that may have a *synergy* or interaction effect, and explain why we might expect this effect based on context. (Recall: an interaction occurs when the effect of one variable on the response is amplified or diminished as the values of the other variable change)
 
 
+------------------------------------------------------
+
+## Week 5
+
+### Tuesday 2-20
+
+
+
+#### Topics
+
+- Non-Parametric Models
+
+- K-Nearest Neighbors
+
+- KNN in R using the `kknn` package
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 3.5 in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+ 
+1. Discuss one benefit, and one drawback, that non-parametric methods (like KNN) have compared to parametric methods (like linear regression).
+
+
+#### Due
+
+- HW 4 due on Tuesday 2/20 at 11:59pm
+
+
+### Thursday 2-22
+
+
+
+#### Topics
+
+- TBA
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- TBA
+
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+ 
+1. TBA
+
+
+
+
 
