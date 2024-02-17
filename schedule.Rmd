@@ -237,7 +237,7 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 2-15
 
-
+[Lecture Notes](lecture_notes/2-15_MLR_Extensions.pdf)
 
 #### Topics
 
