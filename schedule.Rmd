@@ -271,15 +271,16 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 2-20
 
-
+[Lecture Notes](lecture_notes/2-20_KNN.pdf)
 
 #### Topics
+
+- More on MLR extensions
 
 - Non-Parametric Models
 
 - K-Nearest Neighbors
 
-- KNN in R using the `kknn` package
 
 
   
