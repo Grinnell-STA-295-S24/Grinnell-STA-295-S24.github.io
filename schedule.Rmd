@@ -309,7 +309,7 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 2-22
 
-
+[Lecture Notes](lecture_notes/2-22_KNN_pt2.pdf)
 
 #### Topics
 
