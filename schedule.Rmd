@@ -335,5 +335,83 @@ Answer **ONE** of the following two questions:
 
 
 
+------------------------------------------------------
+
+## Week 6
+
+### Tuesday 2-27
+
+
+#### Topics
+
+- Validation Sets
+
+- Cross-Validation
+
+- Bootstrapping
+
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 5.1 (skip 5.1.5) and 5.2 in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer **ONE** of the following three questions:
+ 
+1. In your own words, describe one problem that cross-fold validation attempts to solve.
+
+2. In your own words, describe one problem that cross-fold validation attempts to solve.
+
+3. Compare and contrast bootstrapping and cross-validation. In what ways are they similar? In what ways are they different?
+
+
+#### Due
+
+- HW 5 due on Tuesday 2/27 at 11:59pm
+
+
+### Thursday 2-29
+
+
+
+#### Topics
+
+- The `rsample` package for cross-validation and bootstrapping
+
+- The `yardstick` package for model assessment
+
+- Tuning parameters
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- TBA
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+ 
+1. TBA
+
+
+
+
+
 
 
