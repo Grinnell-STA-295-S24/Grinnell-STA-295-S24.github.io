@@ -341,6 +341,7 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 2-27
 
+[Lecture Notes](lecture_notes/2-27_Resampling.pdf)
 
 #### Topics
 
