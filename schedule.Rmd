@@ -385,15 +385,16 @@ Answer **ONE** of the following three questions:
 
 ### Thursday 2-29
 
+[Live Coding .Rmd](files/RSample_demo.Rmd)
 
+  - [html file](files/RSample_demo.html)
 
 #### Topics
 
 - The `rsample` package for cross-validation and bootstrapping
+ 
 
-- The `yardstick` package for model assessment
 
-- Tuning parameters
 
 
 #### Reading Assignment

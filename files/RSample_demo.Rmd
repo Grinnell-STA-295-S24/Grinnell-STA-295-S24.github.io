@@ -1,0 +1,214 @@
+---
+title: "RSample Demo"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+GrinnellHouses <- read.csv("https://grinnell-sta-295-s24.github.io/data/GrinnellHouses.csv")
+```
+
+Codebook for data:
+
+https://grinnell-sta-295-s24.github.io/data/GrinnellHouses_codebook.txt
+
+We start with data exploration:
+
+```{r}
+glimpse(GrinnellHouses)
+```
+
+Let's plot Latitude and Longitude
+
+```{r}
+ggplot(GrinnellHouses, aes( x = Longitude, y = Latitude, color = SalePrice)) +
+  geom_point() +
+  viridis::scale_color_viridis()
+```
+
+Removing houses with erroneous coordinates:
+
+```{r}
+GrinnellHouses <- GrinnellHouses %>% 
+  filter(Latitude != 0, Longitude != 0)
+```
+
+And plotting again:
+
+```{r}
+ggplot(GrinnellHouses, aes( x = Longitude, y = Latitude, color = SalePrice)) +
+  geom_point() +
+  viridis::scale_color_viridis()
+```
+
+We still have some houses with atypical coordinates, but these are less likely to be data error. Still, it may be best to remove them
+
+```{r}
+GrinnellHouses <- GrinnellHouses %>% 
+  filter(Longitude > -94, Longitude < -92.5, Latitude < 41.85)
+```
+
+
+Plotting once more:
+
+```{r}
+ggplot(GrinnellHouses, aes( x = Longitude, y = Latitude, color = SalePrice)) +
+  geom_point() +
+  viridis::scale_color_viridis()
+```
+
+
+Do we have any NA data?
+
+```{r}
+colSums(is.na(GrinnellHouses))
+```
+
+This is fine, but we should be cautious depending on which models we use.
+
+## Model Building with Functions
+
+
+Goal: write a function that will build a model on a supplied training set.
+
+Suggestions: KNN model
+
+This function will take as input a training data set, a test data set, the number of neighbors desired, and a number corresponding to the distance metric, and will output the knn model object, which can be used to find fitted values.
+
+```{r}
+get_that_model <- function(the_training_data, the_test_data, how_many_neighbors, distance_number){
+  library(kknn)
+  kknn(SalePrice ~ Latitude + Longitude, train = the_training_data,
+       test = the_test_data, distance = distance_number, k =how_many_neighbors, kernel = "rectangular")
+}
+```
+
+
+
+
+## Test and Training Sets Using RSample   
+
+We now split our data into test and training sets using functions from `rsample`
+
+```{r}
+set.seed(100)
+library(rsample)
+my_split <- initial_split(GrinnellHouses)
+Grinnell_train <- training(my_split)
+Grinnell_test <- testing(my_split)
+```
+
+
+## Get that model
+
+Now, let's quickly build our models for a variety of different k's, along with different distance metrics
+
+```{r}
+knn_out_15k <- get_that_model(Grinnell_train, Grinnell_test, 15, 2)
+
+knn_out_5k <- get_that_model(Grinnell_train, Grinnell_test, 5, 2)
+
+knn_out_5k_man <- get_that_model(Grinnell_train, Grinnell_test, 5, 1)
+```
+
+We can arrange the predictions from these models as columns in a data frame 
+
+```{r}
+
+pred_data_frame <- data.frame(the_5 = knn_out_5k$fitted.values, 
+the_15 = knn_out_15k$fitted.values,
+the_5_man = knn_out_5k_man$fitted.values) 
+
+head(pred_data_frame)
+```
+
+
+## Cross-Validation Splits
+
+Now, we use `rsample` to perform 10-fold cross validation using the `vfold_cv` function. 
+
+
+```{r}
+set.seed(9432)
+my_fold <- vfold_cv(Grinnell_train, v = 10)
+```
+
+Note that the output of the `vfold_cv` function is a data frame; the first element is a "Split" indicating how data was partitioned, and the second element is the "Fold" used for validation.
+
+Let's look at the first element of splits:
+
+ - Note that `splits` is a list, so to access the first element, we need to use the `[[ ]]` notation, rather than the `[ ]` notation used for vectors or data frames.
+
+```{r}
+my_fold$splits[[1]] 
+```
+
+
+To get training set, apply `analysis` function to one of splits:
+
+```{r}
+analysis(my_fold$splits[[1]]) %>% head()
+```
+
+To get test set, instead apply `assessment` function
+
+```{r}
+assessment(my_fold$splits[[1]]) %>% head()
+```
+
+## Putting it all together
+
+Now let's use functions to build a model on splits. We'll create prediction on the test set and then compute the test RMSE. 
+Our function will output this RMSE
+
+```{r}
+my_cv_model <- function(split){
+  mod <- lm(SalePrice ~ Latitude + Longitude, data = analysis(split))
+  validation_set <- assessment(split)
+  pred <- predict(mod, newdata = validation_set)
+  rmse <- sqrt(mean((validation_set$SalePrice - pred)^2) )
+  rmse
+}
+```
+
+
+Let apply to the first split, to test functionality:
+
+```{r}
+my_cv_model(my_fold$splits[[1]])
+```
+
+To apply a function to each element of a list or vector, use the `map_dbl` from the `purrr` package
+
+```{r}
+library(purrr)
+
+map_dbl(my_fold$splits, my_cv_model)
+```
+
+Let's attach this to the data frame of splits:
+
+```{r}
+my_fold$rmse <- map_dbl(my_fold$splits, my_cv_model)
+```
+
+
+And look at the results:
+
+```{r}
+my_fold
+```
+
+To get cross-validated RMSE, take average of the rmse column:
+
+```{r}
+mean(my_fold$rmse)
+```
