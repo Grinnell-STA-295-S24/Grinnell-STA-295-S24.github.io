@@ -415,5 +415,84 @@ Answer **ONE** of the following three questions:
 
 
 
+------------------------------------------------------
+
+## Week 7
+
+### Tuesday 3-5
+
+ 
+
+#### Topics
+
+- `for` loops in R
+
+- The `map` functions from `purrr`
+
+- Tuning Parameters
+
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Sections [21.2](https://r4ds.had.co.nz/iteration.html#for-loops) and [21.5](https://r4ds.had.co.nz/iteration.html#the-map-functions) in [R for Data Science](https://r4ds.had.co.nz/index.html)
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer **ONE** of the following three questions:
+ 
+1. What is a `for` loop and why is it useful?
+
+2. What does the `map` function do? Why is this useful?
+
+3. Compare and contrast iterating using `for` loops vs iteration using the `map` function.
+
+
+#### Due
+
+- HW 6 due on Tuesday 3/5 at 11:59pm
+
+
+### Thursday 3-7
+
+ 
+
+#### Topics
+
+- Feature Selection
+
+- Feature Engineering
+ 
+
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- TBA
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+ 
+1. TBA
+
+
+
+
 
 
