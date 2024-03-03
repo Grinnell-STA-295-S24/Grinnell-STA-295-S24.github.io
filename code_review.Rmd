@@ -53,7 +53,7 @@ Scores on the code review will be based on the following rubric:
 | 1 / D    | **Unsatisfactory**:  very limited ability to articulate purpose and intent of code, with limited or no justification for decisions, and inability to correct any errors in the original submission. Many errors made during the review. |
 | 0 / F    | **No credit**:  inability to present any understanding of the code under review.  |
 
-**NOTE**: Scores will be based on the students ability to discuss the code submitted for homework 6, and identify errors in the code and articulate solutions. However, it will *not* be based on whether the original code itself contained errors.
+**NOTE**: Scores will be based on the student's ability to discuss the code submitted for homework 6, and identify errors in the code and articulate solutions. However, they will *not* be based on whether the original code itself contained errors.
 
 If the code happened to contain no non-trivial errors, the instructor may propose a few changes to the code that would introduce errors, and ask the student to explain why these changes would produce errors.
 
