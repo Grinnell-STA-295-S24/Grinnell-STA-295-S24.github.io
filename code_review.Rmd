@@ -2,11 +2,58 @@
 title: "Code Review"
 ---
 
-Twice throughout the term, students will schedule an individual meeting with the instructor to review code the student submitted on a recent assignment, as well as discuss conceptual questions related to the topics covered in class.
-
-Each meeting will last approximately 20 minutes.
+Twice throughout the term, students will schedule an individual meeting with the instructor to review code the student submitted on a recent assignment, as well as discuss conceptual questions related to the topics covered in class. Each meeting will last approximately 20 minutes.
 
 The first review will take place during week 7 (3/4 - 3/8) or week 8 (3/11 - 3/15), and the second review will take place during week 11 (4/15 - 4/19) or week 12 (4/22 - 4/26).
 
-More details about these reviews will be given later in the term.
+
+
+## Overview
+
+In software development and data science, a **code review** is a formal assessment of an author's code by peers or team leaders, and is intended to identify errors, increase code quality and readability, and help both reviewers and authors understand the source better. A code review also provides opportunity for the author to articulate the decisions they made in preparing their code. 
+
+In STA 295, we will be adopting this practice to facilitate face-to-face conversations about modeling decisions between students and the instructor.
+
+## Code Review 1
+
+During weeks 7 and 8 (March 4th - March 9th and March 11th - March 15th), students will schedule a 20-minute individual appointment with the instructor to discuss their code and modeling decisions from **Homework 6**. 
+
+A link to the calendly page for meeting times was sent via email on Sunday, March 3rd. Meetings must be scheduled at least 12 hours in advance, and no more than 6 review in total will be scheduled on a single day. Students unable to attend **any** of the available times should reach out to the instructor as soon as possible to make alternative arrangements.
+
+### Tasks
+
+In the code review meeting, students may be asked to...
+
+- Provide a informal description of the function or intent of a line of code in the homework, as well as the overall purpose of several consecutive lines of code.
+
+- Justify decisions they made to include or omit certain elements of code (for example, decisions to omit certain variables in a linear model, or to use a particular distance metric in KNN).
+
+- Identify places where code or output could potentially be improved.
+
+- Discuss relevant course topics that potentially influenced decisions in coding (for example, discussing why it is more important to minimize test RMSE than training RMSE in a predictive model).
+
+- Propose solutions to coding errors or mistakes present in the submitted document.
+
+### Materials
+
+Students should bring a laptop, tablet or other device which can be used to view their code on the GitHub repo.
+
+*Optionally*, students may also bring handwritten or digital notes which can assist in their recollection of the assignment. However, while quick glances at the notes are fine, extended reference to these notes should be minimized during the review, to allow sufficient time to discuss code.
+
+
+### Grading Rubric
+
+Scores on the code review will be based on the following rubric:
+
+| Score | Criteria |
+|:-----:|---------------------|
+| 4 / A    | **Excellent**: outstanding ability to articulate purpose and intent of code, with comprehensive and nuanced justification for decisions, and efficiency in correcting any errors in the original submission. Few, if any errors, are made during the review. |
+| 3 / B    | **Good**:  reasonable ability to articulate purpose and intent of code, with clear justification for decisions, and some efficiency in correcting any errors in the original submission. Some small errors may be made during the review. |
+| 2 / C    | **Fair**:  limited ability to articulate purpose and intent of code, with limited justification for decisions, and some challenge in correcting any errors in the original submission. Several moderate errors made during the review. |
+| 1 / D    | **Unsatisfactory**:  very limited ability to articulate purpose and intent of code, with limited or no justification for decisions, and inability to correct any errors in the original submission. Many errors made during the review. |
+| 0 / F    | **No credit**:  inability to present any understanding of the code under review.  |
+
+**NOTE**: Scores will be based on the students ability to discuss the code submitted for homework 6, and identify errors in the code and articulate solutions. However, it will *not* be based on whether the original code itself contained errors.
+
+If the code happened to contain no non-trivial errors, the instructor may propose a few changes to the code that would introduce errors, and ask the student to explain why these changes would produce errors.
 
