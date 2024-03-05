@@ -1,0 +1,193 @@
+---
+title: "Iteration Demo"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+ 
+
+## What are loops?
+
+for loops are a programming tool for iteratively performing an operation, which may depend on the iteration number
+
+
+Ex: Create a dataframe of 10 rows and 4 columns, where the ith column contains the first 10 multiples of i.
+
+```{r}
+my_df <- as.data.frame( matrix(0, nrow = 10, ncol = 4) )
+for (i in 1:4){
+  my_df[,i] <- (1:10)*i
+}
+```
+
+Let's rename the columns so they are of the form: multiples.i
+
+```{r}
+colnames(my_df) <- paste("multiples.",1:4, sep = "")
+head(my_df)
+```
+
+## map functions
+
+map functions take a vector as input, and applies a specific function to each element of the vector, and returns a vector as output:
+
+Let's compute the means of each column of the matrix
+
+```{r}
+library(purrr)
+map_dbl(my_df, mean)
+```
+
+## Synthesis
+
+Goal: Use cross-validation to determine the best k for knn
+
+
+## Load Data
+
+```{r}
+GrinnellHousesClean <- read.csv("https://grinnell-sta-295-s24.github.io/data/GrinnellHousesClean.csv")
+```
+
+Create an intial split
+
+```{r}
+library(rsample)
+my_initial_split <- initial_split(GrinnellHousesClean)
+Grinnell_train <- training(my_initial_split)
+Grinnell_test <- testing(my_initial_split)
+```
+
+
+## Step 1
+
+Build a template for a function to make a knn model
+
+```{r}
+library(kknn)
+
+my_knn_mod <- kknn(SalePrice ~ Latitude + Longitude, train = Grinnell_train, test = Grinnell_test, k = 5, distance = 1, kernel = "rectangular")
+```
+
+## Step 2
+
+Build a function which can take k as an input and return a knn model as output
+
+```{r}
+get_knn <- function(k){
+  my_knn_mod <- kknn(SalePrice ~ Latitude + Longitude, train = Grinnell_train, test = Grinnell_test, k = k, distance = 1, kernel = "rectangular")
+  my_knn_mod
+}
+```
+
+```{r}
+my_knn10 <- get_knn(10)
+```
+
+## Step 3
+
+Build a function that will instead output the rmse for the knn model
+
+```{r}
+get_knn_rmse <- function(k){
+  my_knn_mod <- kknn(SalePrice ~ Latitude + Longitude, train = Grinnell_train, test = Grinnell_test, k = k, distance = 1, kernel = "rectangular")
+  my_preds <- my_knn_mod$fitted.values
+  my_obs <- Grinnell_test$SalePrice
+  my_rmse <- sqrt(mean((my_obs - my_preds)^2))
+  my_rmse
+}
+```
+
+
+```{r}
+get_knn_rmse(10)
+```
+## Step 4
+
+Use a for loop to compute test rmse for k between 1 and 30
+
+```{r}
+my_rmse <- numeric(30)
+for (i in 1:30){
+  my_rmse[i] <- get_knn_rmse(i)
+}
+```
+
+```{r}
+head(my_rmse)
+```
+```{r fig.width = 4, fig.height = 3}
+library(dplyr)
+library(ggplot2)
+data.frame(k = 1:30, my_rmse) %>% 
+  ggplot(aes(x = k, y = my_rmse))+geom_line() + geom_point()
+```
+
+## Step 5
+
+Use cross-validation to compare
+
+```{r}
+set.seed(331)
+library(rsample)
+my_cv <- vfold_cv(GrinnellHousesClean)
+```
+
+Let's rebuild our `get_knn_rmse` function so that it takes a split as input:
+
+```{r}
+get_knn_rmse_split <- function(k, split){
+  my_training <- analysis(split)
+  my_testing <- assessment(split)
+  my_knn_mod <- kknn(SalePrice ~ Latitude + Longitude, train = my_training, test = my_testing, k = k, distance = 1, kernel = "rectangular")
+  my_preds <- my_knn_mod$fitted.values
+  my_obs <- my_testing$SalePrice
+  my_rmse <- sqrt(mean((my_obs - my_preds)^2))
+  my_rmse
+}
+```
+
+Now, use `map_dbl` to create a vector of rmse for each fold:
+
+```{r}
+library(purrr)
+map_dbl(my_cv$splits, get_knn_rmse_split, k = 3)
+```
+
+Now, we use a for-loop to iterate across all k between 1 and 30:
+
+```{r}
+my_rmse_mat <- as.data.frame( matrix(NA, ncol = 30, nrow = 10))
+
+for (i in 1:30){
+  my_rmse_mat[,i] <- map_dbl(my_cv$splits, get_knn_rmse_split, k = i)
+}
+```
+
+
+Now, we rename columns:
+
+```{r}
+colnames(my_rmse_mat) <- paste("knn",1:30, sep ="")
+head(my_rmse_mat)
+```
+
+Finally, we can get our CV RMSE estimates by applying the `mean` function to each column using `map_dbl`
+
+```{r}
+cv_rmse <- map_dbl(my_rmse_mat, mean)
+```
+
+
+Finally, we plot to summarize:
+
+```{r fig.width = 4, fig.height = 3}
+data.frame(k = 1:30, cv_rmse) %>% 
+  ggplot(aes(x = k, y = cv_rmse))+geom_line() + geom_point()
+```
+

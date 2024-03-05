@@ -421,7 +421,11 @@ Answer **ONE** of the following three questions:
 
 ### Tuesday 3-5
 
- 
+Live Code:
+
+  - [html file](files/iteration_demo.html)
+  
+  - [.Rmd file](files/iteration_demo.Rmd)
 
 #### Topics
 
