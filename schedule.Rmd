@@ -469,7 +469,7 @@ Answer **ONE** of the following three questions:
 
 ### Thursday 3-7
 
- 
+[Lecture Notes](lecture_notes/3-7_Feature_Selection.pdf) 
 
 #### Topics
 
