@@ -505,3 +505,80 @@ Answer **ONE** of the following two questions:
 
 
 
+------------------------------------------------------
+
+## Week 8
+
+### Tuesday 3-12
+
+ 
+
+#### Topics
+
+- Penalized Regression
+
+- Ridge Regression
+
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 6.2.1, 6.2.3, 6.5.2 (just the subsection on Ridge Regression) in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer the following question
+ 
+1. Compare the method of *ridge regression* (introduced in Section 6.2) to the method of *least squares* (the classic method in section 3.1) for finding coefficients of a linear model: Which method is likely to have higher bias? Which method is likely to have higher variance? Why is Ridge Regression likely to find a model with lower test RMSE than least squares?
+
+
+#### Due
+
+- None
+
+
+### Thursday 3-14
+
+ 
+
+#### Topics
+
+- LASSO
+
+- Case-Study Using Penalized Regression
+
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 6.2.2 (skip the subsection "Bayesian Interpretation") and 6.5.2 (the subsection on LASSO) in [ISLR](https://www.statlearning.com/) 2e
+
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+
+Answer **ONE** of the following two questions:
+
+
+1. Briefly explain one similarly and one difference between Ridge Regression and LASSO.
+
+2. What is one benefit of using LASSO to perform feature selection compared to the best subset algorithm?
+
+
