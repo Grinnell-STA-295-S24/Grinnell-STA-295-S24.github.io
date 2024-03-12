@@ -511,7 +511,7 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 3-12
 
- 
+[Lecture Notes](lecture_notes/3-12_Ridge_Regression.pdf)
 
 #### Topics
 
