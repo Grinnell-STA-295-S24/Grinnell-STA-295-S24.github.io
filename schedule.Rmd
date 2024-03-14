@@ -549,13 +549,13 @@ Answer the following question
 
 ### Thursday 3-14
 
- 
+[Lecture Notes](lecture_notes/3-14_LASSO.pdf)
+
 
 #### Topics
 
 - LASSO
 
-- Case-Study Using Penalized Regression
 
 
 
