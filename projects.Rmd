@@ -5,6 +5,76 @@ title: "Projects"
 ## Overview
 One of the most important functions of the working statistician is to investigate and answer significant research questions by analyzing real-world data, using a variety of elementary and advanced modeling techniques, and to distill the results into reports that are accessible to the non-statistician. 
 
-You will work in small groups to research a topic of interest to you, and then summarize your results in a short presentation to the class and as well as a technical report submitted to the instructor.
+You will work in small groups to explore a topic of interest to you, building appropriate predictive models to answer a research question, and then summarize your results in a short presentation to the class and as well as in a technical report submitted to the instructor.
 
-More details about this project will be given later in the semester.
+## Due Dates
+
+1. Group Membership: 5pm Friday, March 15th (Week 8) via Email
+
+2. Project Proposal: 5pm Monday, April 8th (Week 10) on GitHub
+
+3. Draft of Data and Exploratory Data Analysis sections: 5pm Monday, April 22nd (Week 12) on GitHub
+
+4. Technical Report Rough Draft: 5pm Friday, May 10th (Week 14) on GitHub
+
+5. Presentation: Thursday, May 16th 9am - noon
+
+6. Final Technical Report: Friday, May 17th by 5pm on GitHub
+
+## Project Goals
+
+During your project, you will ...
+
+1. Collect multivariate data appropriate for regression or classification tasks.
+
+2. Articulate clear and compelling research questions that can be answered by building predictive models on an appropriate data set.
+
+3. Implement data wrangling in order to pre-process data for analysis.
+
+4. Perform exploratory data analysis using data visualizations and descriptive statistics to understand the structure of your data.
+
+5. Build and assess predictive statistical models in order to answer the research question.
+
+6. Craft a clear, engaging narrative answering the research question in a technical report.
+
+7. Share the results of your investigation with your peers through a presentation.
+
+## Components
+
+### Groups
+
+You will arrange yourselves into groups of 2 - 3 students each. One person in your group should submit a list of group members to me via email by **5pm on Friday, March 15th**. On Friday evening, I will sort any students who didn't express group preferences into groups.
+
+### Project Data
+
+For this project, you will need to collect or obtain a rich multivariate data set with many observations that can be used to build predictive models to answer a research question. Generally, this data will likely need to contain a categorical or quantitative response variable, at least 4 other predictors, and at least 100 observations (although larger data sets are encouraged).
+
+Some resources for finding appropriate data can be found below:
+
+  - Grinnell College Libraries [Data Best Bets](https://grinnell.libguides.com/c.php?g=1057667&p=7689520), a list of large, general-purpose, user-friendly aggregations of data covering a variety of topics.
+  
+  - [Stat2Labs](https://stat2labs.sites.grinnell.edu/DataResources.html), a site providing project-based mateirals that emphasize real-world applications and conceptual understanding.
+  
+  - Grinnell [Data Analysis adn Social Inquiry Lab Downloadable Data](https://dasil.sites.grinnell.edu/downloadable-data/), a page dedicated to several DASIL-affiliated data sets for download.
+  
+  - [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/), a collection of curated data sets widely used by the Machine / Statistical Learning community for model building.
+  
+  - [Kaggle](https://www.kaggle.com/datasets), an extremely large repository of data sets covering wide variety of topics. **Warning** The quality, usability and authenticity of these data sets are not as thoroughly assessed as those from other sources; use data from this site with caution. 
+  
+
+
+### Project Proposal
+
+By **5pm Monday, April 8th**, your group will draft a well-written project proposal outlining your project and upload the .pdf document to your group's GitHub repository. The proposal should include the following information:
+
+- At least 1 paragraph of background information on the topic you wish to study.
+
+- A precise statement of the research question you wish to answer.
+
+- A candidate for the data sets that you can analyze.
+
+- A description of the type of data you will use to answer your question, and a list of variables you might include in your analysis
+
+- At least 1 paragraph describing the utility of an answer to your research question, or a discussion of why an answer would be interesting or relevant to you.
+
+- A brief discussion of any obstacles you foresee either in data acquisition or analysis.
