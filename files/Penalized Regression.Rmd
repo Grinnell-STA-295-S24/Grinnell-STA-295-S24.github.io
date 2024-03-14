@@ -1,0 +1,204 @@
+---
+title: "Penalized Regression"
+author: "Patrick Kim"
+date: "2024-03-10"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#####################################################################################################################
+Preliminaries
+#####################################################################################################################
+Load the packages and set seed.
+```{r}
+library(ISLR2)
+library(dplyr)
+library(ggplot2)
+library(glmnet)
+library(ggrepel)
+library(tidyr)
+library(recipes)
+library(vip)
+library(tibble)
+set.seed(295) # set seed for reproducibility.
+```
+
+We will be using "Hitters" data in the ISLR2 package, where the "salary" variable will be the response variable of our prediction model. Let's load the data and do simple exploratory analysis.
+```{r}
+# Let's see what variables are contained in the data.
+names(Hitters)
+
+# Check the dimension.
+dim(Hitters) # There are 322 observations/rows and 20 variables/columns.
+
+# Since we want to predict the "Salary" value using appropriate predictors in the following sections, it is essential to check if there is any missing values in the "salary" variable.
+sum(is.na(Hitters$Salary)) # We have 59 missing values for "Salary". Let's proceed to drop all the rows with missing values.
+Hitters <- na.omit(Hitters) # Drop the rows with missing values
+dim(Hitters) # We can check that 59 defective rows are dropped from the original 322 rows, resulting in 322 observations/rows.
+sum(is.na(Hitters))
+```
+
+Unlike simple/multivariate linear regression or kNN, penalized regression (Ridge, Lasso) functions in R take matrix as an input for predictors and a vector as an input for the response variable. The input matrix of predictors is called "design matrix", which has the first column of ones to create the constant term, b0, of the regression (take 336 or ask Prof. Wells/me if you want to know why). Thus, we need to extract variables from the dataframe (here, "Hitter") and put them into matrix. We will be using "model.matrix()" function to create a predictor matrix to be used as an input.
+%%% Side note: linear regression or kNN are formulated/computed in the terms of vectors and matrices, but the functions in R to implement them do not necessitate vector/matrix inputs. The functions do matrix/vector operations internally so that we don't recognize it.
+```{r}
+X <- model.matrix(Salary ~., data = Hitters)[, -1] # I am telling the "model.matrix" function to put every variable except the "Salary" variable into the matrix "X". Note that by specifying the range "[, -1]", I am dropping the first column, which is the column of ones.
+y <- Hitters$Salary # Recall that data frames are collection of column vectors of different variables. Since we want to predict hitters' salaries, extract the "Salary" column from the "Hitters" dataframe.
+```
+
+#####################################################################################################################
+Ridge Regression
+#####################################################################################################################
+Now let's do the Ridge regression with the "glmnet" function. This function has four parameters.
+1. A matrix of predictors
+2. A vector of a response variable
+3. alpha value, which determines regression type. Set "alpha = 0" for Ridge regression and "alpha = 1" for Lasso.
+4. lambda value/vector for the tuning parameter (also called "hyperparameter", think of it as a sensitivity of the model). Higher lambda will shrink the coefficients more in terms of L2 (Euclidean) norm and reduce their variance.
+```{r}
+grid <- 10^seq(10, -2, length = 100) # Create a vector of lambda values. Since we are not doing cross-validation, we have not chosen a single lambda value, so we are throwing in multiple values of lambda as a vector to see how the model changes for different lambda values.
+ridge.mod <- glmnet(
+  x = X,
+  y = y,
+  alpha = 0,
+  lambda = grid
+) # Run the Ridge regression.
+```
+
+The resulting "ridge.mod" is very confusing since it doesn't look like outputs from linear regression or kNN. To access the coefficients, we need to call "coef(ridge.mod)".
+```{r}
+# Check the dimension of the coefficient matrix
+dim(coef(ridge.mod)) # It says we have 20 rows and 100 columns, which is consistent with the input of 19 predictors and 1 constant term and 100 different lambda values. Each column of the coefficient matrix has 20 regression coefficients for the constant term and the predictors, resulting from the chosen tuning parameter (lambda) value.
+```
+
+Recall that Ridge regression is designed to "penalize" the L2 norm of the beta coefficients. As the tuning parameter (lambda) increases, the model penalizes the L2 norm of the beta coefficients heavier, resulting in smaller coefficients. Let's check if our coefficients are consistent with the theory so that the choice of greater lambda leads to smaller beta coefficients.
+```{r}
+# Check the lambda value for the 1st, 50th and 100th model
+ridge.mod$lambda[1] # lambda = 1e+10 = 10000000000
+ridge.mod$lambda[50] # lambda = 11497.57
+ridge.mod$lambda[100] # lambda = 0.01
+
+# Access individual coefficient vectors for each lambda value chosen above
+coef(ridge.mod)[, 1]
+coef(ridge.mod)[, 50]
+coef(ridge.mod)[, 100]
+
+# We can see that as we move from 1 to 50 to 100, the coefficients get larger. Now let's check if the L2 norms of the slope coefficients (excluding the intercept term) get larger as we go from 1 to 100.
+sqrt(sum(coef(ridge.mod)[-1, 1]^2)) # 8.080244e-06
+sqrt(sum(coef(ridge.mod)[-1, 50]^2)) # 6.360612
+sqrt(sum(coef(ridge.mod)[-1, 100]^2)) # 136.2012
+
+# As we choose larger tuning parameter, the L2 norm of the regression coefficient gets penalized less, leading to greater coefficients and greater L2 norm of coefficients. Alternatively, the effect of lambda on the size of coefficients can be demonstrated as:
+lam <- grid %>% 
+  as.data.frame() %>%
+  mutate(penalty = ridge.mod$a0 %>% names()) %>%
+  rename(lambda = ".")
+
+ridge.results <- ridge.mod$beta %>% 
+  as.matrix() %>% 
+  as.data.frame() %>%
+  rownames_to_column() %>%
+  gather(penalty, coefficients, -rowname) %>%
+  left_join(lam)
+
+result_labels <- ridge.results %>%
+  group_by(rowname) %>%
+  filter(lambda == min(lambda)) %>%
+  ungroup() %>%
+  top_n(5, wt = abs(coefficients)) %>%
+  mutate(var = paste0("x", 1:5))
+
+ggplot() +
+  geom_line(data = ridge.results, aes(lambda, coefficients, group = rowname, color = rowname), show.legend = FALSE) +
+  scale_x_log10() +
+  geom_text(data = result_labels, aes(lambda, coefficients, label = var, color = rowname), nudge_x = -.06, show.legend = FALSE)
+```
+
+Now let's cross-validate to choose the optimal tuning parameter
+```{r}
+cv.ridge <- cv.glmnet(X, y, nfolds = 10, alpha = 0) # "cv.glmnet" does sample splitting and n-fold cross-validation automatically.
+plot(cv.ridge) # plot the cross-validation result to see how different choices of lambda results in different MSE values.
+optimal.ridge.lambda <- cv.ridge$lambda.min # this saves the lambda value with the lowest MSE. Remember, we want to select a tuning parameter that gives us the lowest MSE. From the plot above, we can see that the MSE monotonically increases as log(lambda) increases. Thus, The lowest lambda that is associated with the lowest MSE is the first one that appears in the plot.
+optimal.ridge.lambda # explicitly, the lambda value that gives us the lowest MSE is lambda = 25.52821
+```
+
+#####################################################################################################################
+Lasso Regression
+#####################################################################################################################
+Now let's do the Lasso regression with the "glmnet" function and X, y, and the vector of lambda values "grid" we created above. This function has four parameters.
+1. A matrix of predictors
+2. A vector of a response variable
+3. alpha value, which determines regression type. Set "alpha = 0" for Ridge regression and "alpha = 1" for Lasso.
+4. lambda value/vector for the tuning parameter (also called "hyperparameter", think of it as a sensitivity of the model). Higher lambda will shrink the coefficients more in terms of L1 (Manhattan) norm and induce "sparsity"-there will be more variables with zero coefficient so that they are not "selected" in the model.
+```{r}
+lasso.mod <- glmnet(
+  X,
+  y,
+  alpha = 1,
+  lambda = grid
+) # Run the Lasso regression.
+
+# The plot below shows how greater lambda results in smaller coefficients.
+lasso.results <- lasso.mod$beta %>% 
+  as.matrix() %>% 
+  as.data.frame() %>%
+  rownames_to_column() %>%
+  gather(penalty, coefficients, -rowname) %>%
+  left_join(lam)
+
+result_labels <- lasso.results %>%
+  group_by(rowname) %>%
+  filter(lambda == min(lambda)) %>%
+  ungroup() %>%
+  top_n(5, wt = abs(coefficients)) %>%
+  mutate(var = paste0("x", 1:5))
+
+ggplot() +
+  geom_line(data = lasso.results, aes(lambda, coefficients, group = rowname, color = rowname), show.legend = FALSE) +
+  scale_x_log10() +
+  geom_text(data = result_labels, aes(lambda, coefficients, label = var, color = rowname), nudge_x = -.05, show.legend = FALSE)
+```
+
+Analogous to the Ridge regression, the optimal tuning parameter lambda for Lasso can be chosen using the "cv.glmnet" function.
+```{r}
+cv.lasso <- cv.glmnet(X, y, nfolds = 10, alpha = 1) # "cv.glmnet" does sample splitting and n-fold cross-validation automatically. Note that we are using "alpha=1" for Lasso here.
+plot(cv.lasso) # plot the cross-validation result to see how different choices of lambda results in different MSE values.
+optimal.lasso.lambda <- cv.lasso$lambda.min # this saves the lambda value with the lowest MSE. Remember, we want to select a tuning parameter that gives us the lowest MSE. 
+optimal.lasso.lambda # explicitly, the lambda value that gives us the lowest MSE is lambda = 2.220313.
+```
+
+Recall that Lasso regression (1) shrinks the coefficients and (2) selects variables. With the optimal lambda chosen via cross-validation above (lambda = 2.220313), let's see which variables are selected.
+```{r}
+optimal.lasso <- glmnet(
+  X,
+  y,
+  alpha=1,
+  lambda=2.220313
+)
+coef(optimal.lasso) # we can see that "Runs", "RBI", "CAtBat", and "CHits" are omitted in this model with cv-optimal tuning parameter of labmda = 2.220313.
+```
+
+#####################################################################################################################
+Basic example with matrix algebra in R: ordinary least squares regression
+#####################################################################################################################
+```{r}
+OLS <- function(X, y) {
+  # Check if X and y are compatible in terms of dimensions for further matrix-vector operations
+  if (nrow(X) != length(y)) {
+    stop("The number of rows in X must be equal to the length of y.")
+  }
+  
+  # Add a column of ones to X to account for the intercept term (this is called the design matrix)
+  X <- cbind(1, X)
+  
+  # Calculate the OLS estimator beta_hat
+  beta_hat <- solve(t(X) %*% X) %*% t(X) %*% y # here, the "solve" function computes the inverse of a given matrix, "t()" computes the transpose of a matrix, and "%*%" is a matrix-vector or matrix-matrix multiplication.
+  
+  return(beta_hat)
+}
+
+# The OLS function above gives us the same result as the built-in lm function when y is regressed on X
+lm(y ~ X)
+OLS(X, y)
+```
