@@ -558,7 +558,7 @@ Answer the following question
 
 - LASSO and Ridge Regression Code Example (created by Class Mentor: Patrick Kim)
 
-  - [.pdf file](files/Penalized Regression.pdf)
+  - [.pdf file](files/Penalized-Regression.pdf)
   
   - [.Rmd file](files/Penalized Regression.Rmd)
 
