@@ -586,3 +586,89 @@ Answer **ONE** of the following two questions:
 2. What is one benefit of using LASSO to perform feature selection compared to the best subset algorithm?
 
 
+------------------------------------------------------
+
+## Week 9
+
+### Tuesday 4-2
+
+ 
+
+#### Topics
+
+- Classification Problems
+
+- Assessing Classification Accuracy
+
+- The Bayes Classifier
+
+- KNN for Classification
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 2.2.3 in [ISLR](https://www.statlearning.com/) 2e
+
+- Read Section 11.2 and 11.3 of [Applied Predictive Modeling](https://link-springer-com.grinnell.idm.oclc.org/book/10.1007/978-1-4614-6849-3) (a free .pdf copy of the text is available through SpringerLink using Grinnell College credentials)
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer the following question:
+ 
+1. Choose three of the model evaluation measurements discussed in Sections 11.2 and 11.3 of *Applied Predictive Modeling* (Accuracy, Sensitivity, Specificity, Kappa, PPV, NPV, PCF, ROC Curve, Lift Charts); briefly describe how the measurement is calculated and then explain why we would be interested in this measurement.
+
+
+#### Due
+
+- None
+
+
+### Thursday 4-4
+
+ 
+
+#### Topics
+
+- Logistic Regression
+
+  - Simple logistic regression
+  
+  - Predicting classes using logistic regression
+  
+  - Multiple logistic regression
+  
+  - Multinomial logistic regression
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 4.1, 4.2, 4.3, 4.7.1 and 4.7.2 in [ISLR](https://www.statlearning.com/) 2e
+
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+
+Answer **ONE** of the following two questions:
+
+
+1. What is one reason linear regression is not often used for classification problems?
+
+2. Describe a particular real-world binary classification problem in which it is more costly to make one type of misclassification mistake than the other (i.e. if the two levels of the response are coded as 0 and 1, it is more costly to classify a true 0 as a 1 than to classify a true 1 as a 0.)
+
