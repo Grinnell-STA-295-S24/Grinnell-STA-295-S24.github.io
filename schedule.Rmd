@@ -635,8 +635,9 @@ Answer the following question:
 
 ### Thursday 4-4
 
- 
+[Lecture Notes](lecture_notes/4-4_Logistic_Regression.pdf) 
 
+ 
 #### Topics
 
 - Logistic Regression
