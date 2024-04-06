@@ -673,3 +673,90 @@ Answer **ONE** of the following two questions:
 
 2. Describe a particular real-world binary classification problem in which it is more costly to make one type of misclassification mistake than the other (i.e. if the two levels of the response are coded as 0 and 1, it is more costly to classify a true 0 as a 1 than to classify a true 1 as a 0.)
 
+
+
+
+
+------------------------------------------------------
+
+## Week 10
+
+### Tuesday 4-9
+ 
+
+#### Topics
+
+- Extensions of Logistic Regression
+
+  - Multinomial models
+
+  - Data transformations
+  
+  - Penalized models
+
+- Practice with Classification Problems
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 12.5 of [Applied Predictive Modeling](https://link-springer-com.grinnell.idm.oclc.org/book/10.1007/978-1-4614-6849-3) (a free .pdf copy of the text is available through SpringerLink using Grinnell College credentials)
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+- In what ways is Penalized **Logistic** Regression similar to  Penalized **Linear** Regression? In what ways is it different?
+
+
+#### Due
+
+- None
+
+
+### Thursday 4-11
+
+
+
+ 
+#### Topics
+
+- Logistic Regression
+
+  - Simple logistic regression
+  
+  - Predicting classes using logistic regression
+  
+  - Multiple logistic regression
+  
+  - Multinomial logistic regression
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 13.6 of [Applied Predictive Modeling](https://link-springer-com.grinnell.idm.oclc.org/book/10.1007/978-1-4614-6849-3) (a free .pdf copy of the text is available through SpringerLink using Grinnell College credentials)
+
+- Read Section 4.7.5 in [ISLR](https://www.statlearning.com/) 2e
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+
+Answer **ONE** of the following two questions:
+
+
+1.  What is the "naive" assumption that is made in the Naive Bayes model? In what ways does this simplify the model?
+
+2. Explain what each of the following means: "posterior probability of the class", "prior probability of the outcome", "prior probability of the predictor" and "conditional probability"
