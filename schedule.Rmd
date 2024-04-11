@@ -724,21 +724,14 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 4-11
 
-
+[Lecture Notes](lecture_notes/4-11_Naive_Bayes.pdf)
 
  
 #### Topics
 
-- Logistic Regression
+- Generative Probability Models
 
-  - Simple logistic regression
-  
-  - Predicting classes using logistic regression
-  
-  - Multiple logistic regression
-  
-  - Multinomial logistic regression
-
+- Naive Bayes
 
 
 #### Reading Assignment
