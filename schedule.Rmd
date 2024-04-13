@@ -754,3 +754,78 @@ Answer **ONE** of the following two questions:
 1.  What is the "naive" assumption that is made in the Naive Bayes model? In what ways does this simplify the model?
 
 2. Explain what each of the following means: "posterior probability of the class", "prior probability of the outcome", "prior probability of the predictor" and "conditional probability"
+
+
+
+
+
+------------------------------------------------------
+
+## Week 11
+
+### Tuesday 4-16
+
+
+
+#### Topics
+
+- Decision Trees for Regression
+
+- Trees in R
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+
+- Read Section 8.1 and 8.8 (just the part about Single Trees) of [Applied Predictive Modeling](https://link-springer-com.grinnell.idm.oclc.org/book/10.1007/978-1-4614-6849-3) (a free .pdf copy of the text is available through SpringerLink using Grinnell College credentials)
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+1.  Suppose you want to predict the temperature in Grinnell at 2:30pm on Tuesday, APril 16th. Give an explicit example of a decision tree that uses two variables and at least 3 (but no more than 5) nodes that you could use to make this prediction. (Your tree doesn't need to be the "best" tree, but should be plausible based on what you know about Grinnell weather.)
+
+
+
+#### Due
+
+- HW 8
+
+
+### Thursday 4-18
+
+
+
+ 
+#### Topics
+
+- Classification Trees
+
+- Practice with Trees
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- Read Section 14.1 and 14.8 (just the part about Classification Trees) of [Applied Predictive Modeling](https://link-springer-com.grinnell.idm.oclc.org/book/10.1007/978-1-4614-6849-3) (a free .pdf copy of the text is available through SpringerLink using Grinnell College credentials)
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+
+Answer **ONE** of the following two questions:
+
+
+1. Choose one of either Gini Index or the Information Statistic (or entropy) and briefly explain in 2 to 3 sentences why it is a measurement of node purity. Be sure to include what values correspond to high and to lower impurities.
+
+2. What parameters need to be **tuned** for classification or regression trees? What are the possible consequences of leaving these parameters at their default values?
