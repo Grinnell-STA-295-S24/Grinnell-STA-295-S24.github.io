@@ -13,8 +13,8 @@
 
 <title>Projects</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.5.1/jquery-3.5.1.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -145,15 +145,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -182,8 +178,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "\e259";
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -191,9 +187,16 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "\e258";
-  font-family: 'Glyphicons Halflings';
+  content: "&#xe258;";
   border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -469,6 +472,218 @@ research question, or a discussion of why an answer would be interesting
 or relevant to you.</p></li>
 <li><p>A brief discussion of any obstacles you foresee either in data
 acquisition or analysis.</p></li>
+</ul>
+</div>
+<div id="exploratory-data-analysis" class="section level3">
+<h3>Exploratory Data Analysis</h3>
+<p>Before you build any models, you should perform appropriate
+exploratory (or descriptive) analysis. This might include:</p>
+<ul>
+<li><p>Data wrangling, including joining two or more data sets into a
+single set, converting quantitative variables to categorical or
+collapsing categorical variables to ones with fewer levels, renaming
+variables and/or variable levels, creating new variables from existing
+ones</p></li>
+<li><p>Descriptive statistics for all variables you intend to
+investigate. For quantitative variables, this includes: mean, standard
+deviation, 5-number summaries, and histograms and/or boxplots; and for
+categorical variables, this includes: a list of all factor levels, as
+well as counts and proportions within each level, and bar
+charts.</p></li>
+<li><p>Exploration of the relationships between variables, both
+numerically and graphically. Consider not only the relationship between
+the response and explanatory variables, but also between two (or more)
+explanatory variables.</p></li>
+<li><p>You should not focus on building statistical models at this
+stage.</p></li>
+</ul>
+<p>You will summarize your exploratory data analysis in a 2 - 3 page
+exploratory analysis report, uploaded to your Github repo by <strong>5pm
+Monday April 22nd</strong>. This report should include:</p>
+<ul>
+<li><p>A short paragraph introducing your data and the primary research
+question</p></li>
+<li><p>A description of the variables of interest to your
+investigation</p></li>
+<li><p>An overview of of any data wrangling that you performed (you do
+not need to <em>show</em> the code or the code output, just describe
+what you did and why)</p></li>
+<li><p>Graphs and summary tables from your exploratory analysis, along
+with discussion and interpretation of the results; you do not need to
+include every summary statistic you calculated or graph you made, but
+should focus on the most relevant or important ones.</p></li>
+<li><p>Brief description of your plans for model building.</p></li>
+</ul>
+</div>
+<div id="technical-report" class="section level3">
+<h3>Technical Report</h3>
+<p>A final draft of your technical report should be between 3 and 5
+pages in length, and is to be uploaded to GitHub by <strong>5pm on
+Friday, May 17th</strong>. The technical report should be a .Rmd file
+with output either to .pdf or .html. Your report should contain the
+following sections:</p>
+<div id="introduction" class="section level4">
+<h4>Introduction</h4>
+<p>An overview of the topic and relevant background information, a
+discussion of existing theories and models, a description of how your
+investigation differs from prior ones, and a precise statement of your
+research question.</p>
+</div>
+<div id="methods" class="section level4">
+<h4>Methods</h4>
+<p>A description of the data sets used, a discussion of where the data
+came from and how it was obtained, a summary of the data itself
+(including the number of observations and variables, and what each
+observational unit represents), an explanation of data processing
+implemented to prepare the data for analysis.</p>
+</div>
+<div id="exploratory-data-analysis-1" class="section level4">
+<h4>Exploratory Data Analysis</h4>
+<p>A presentation of graphical and numerical summaries of the data
+(along with a discussion of their relevance to modeling assumptions and
+further analysis), a description of the statistical methods used to
+analyze your data, and diagnostics of the appropriateness of any models
+or inference procedures you will apply in the Results section. You do
+not need to include every graph you created during your research, only
+those that are most relevant to your results.</p>
+</div>
+<div id="results" class="section level4">
+<h4>Results</h4>
+<p>A description of the tools and methods used to build your models, an
+overview of the models themselves and a summary of their attributes, a
+discussion of model comparisons and accuracy, a presentation of model
+predictions, classifications, and/or parameter inference.</p>
+</div>
+<div id="discussion" class="section level4">
+<h4>Discussion</h4>
+<p>A review of the results generated from the model and synthesis with
+the context from which the data was generated or observed, a restatement
+of research objective and an answer to the original research question, a
+discussion limitations of the study as well as areas for further
+research.</p>
+</div>
+<div id="code-appendix" class="section level4">
+<h4>Code Appendix</h4>
+<p>A collection of code used to process data, perform analysis, and
+build models. To avoid excessive run-times when compiling the document,
+consider adding <code>eval = F</code> to the chunk options (which will
+force the code not to be run when compiling the document into .pdf or
+.html)</p>
+</div>
+<div id="references" class="section level4">
+<h4>References</h4>
+<p>The citations for any data sets, literature or resources directly or
+indirectly referenced in your report, along with any sources you
+consulted during your investigation that had a significant impact on
+your analysis. Citations should be made according to the ASA style
+guide: <a href="https://amstat.tfjournals.com/asa-style-guide/"
+class="uri">https://amstat.tfjournals.com/asa-style-guide/</a></p>
+</div>
+</div>
+<div id="presentation" class="section level3">
+<h3>Presentation</h3>
+<p>During finals week, each group will give a 10 - 15 minute
+presentation to the class outlining their project and results. Fifteen
+minutes is <strong>not</strong> a lot of time, so groups should plan
+carefully what they will discuss. The structure of the talk should
+mirror the structure of the technical report (albeit greatly
+abbreviated). Groups should create slides or an .html page that can be
+projected in order to engage the audience.</p>
+</div>
+</div>
+<div id="specifications-and-rubric" class="section level2">
+<h2>Specifications and Rubric</h2>
+<div id="document-specifications" class="section level3">
+<h3>Document Specifications</h3>
+<p>The final technical report should…</p>
+<ul>
+<li><p>Be composed as an .Rmd file, and then exported to .pdf.</p></li>
+<li><p>Use the standard font and margin sizes.</p></li>
+<li><p>Be between 3 and 5 pages in length, including graphics and
+tables.</p></li>
+<li><p>Include a title page, with project title and author names. This
+page does not count towards the page limit.</p></li>
+<li><p>Display the code used to perform your analysis
+<strong>ONLY</strong> if reading the code is necessary for understanding
+the output.</p></li>
+<li><p>Include the output of the code (summary statistics,
+visualizations, and the results of any inference where
+appropriate).</p></li>
+<li><p>Include graphics with appropriate axes labels and titles, and of
+reasonable size (i.e. that do not take up a half-page of the document,
+unless absolutely necessary)</p></li>
+<li><p>Include tables that are neatly formatted and legible.</p></li>
+</ul>
+</div>
+<div id="document-formatting-suggestions" class="section level3">
+<h3>Document Formatting Suggestions</h3>
+<ul>
+<li><p>A page break can be created in R using the command, which should
+be on its own line after the metadata (stuff concluding with — at the
+top of the .Rmd) but before the start of your document prose.</p></li>
+<li><p>To have code run when you knit, but not display, replace the
+chunk header <code>{r}</code> with <code>{r echo = F}</code>.</p></li>
+<li><p>If you also don’t want the output of the code to display (for
+example, for data processing steps), use
+<code>{r echo = F, include = F}</code></p></li>
+<li><p>You can control the size of included graphics by adding
+<code>{r fig.width =..., fig.height=...}</code> to your chunk options,
+where … is replaced with the desired width/height of graphic in
+inches.</p></li>
+<li><p>You can create nice tables for .pdf output by piping
+(<code>%&gt;%</code>) a data frame into the <code>kable()</code>
+function from the <code>knitr</code> package. Some table formatting
+options can be controlled through inputs in the <code>kable</code>
+function. For description, see run <code>?kable()</code> in the
+console.</p></li>
+</ul>
+</div>
+<div id="document-rubric" class="section level3">
+<h3>Document Rubric</h3>
+<p>The final technical report will be assessed on the following:</p>
+<ul>
+<li><p><strong>Requirements</strong>: The degree to which the report
+adhered to the <strong>Document Specifications</strong> above.</p></li>
+<li><p><strong>Content</strong>: The depth and accuracy of analysis, as
+well as the appropriateness of the methods used.</p></li>
+<li><p><strong>Style</strong>: The degree to which the text is
+well-organized, well-written, coherent and understandable.</p></li>
+</ul>
+</div>
+<div id="presentation-specifications" class="section level3">
+<h3>Presentation Specifications</h3>
+<p>The presentation should…</p>
+<ul>
+<li><p>Be accompanied by a slideshow with appropriate narrative, data
+summaries and graphics</p></li>
+<li><p>Incorporate each group member in a speaking role in a significant
+way</p></li>
+<li><p>Be between 10 and 15 minutes in length</p>
+<ul>
+<li>Presentations exceeding 15 minutes will be given a 1-minute warning,
+and then will be cut-off after 16 minutes, to provide time for all
+presentations</li>
+</ul></li>
+<li><p>Be well-rehearsed prior to delivery</p></li>
+<li><p>Be delivered without reading verbatim from the slides or from
+notes (notes can be briefly referenced during the presentation, but
+should not be extensively consulted)</p></li>
+</ul>
+</div>
+<div id="presentation-rubric" class="section level3">
+<h3>Presentation Rubric</h3>
+<p>The presentation will be assessed on the following:</p>
+<ul>
+<li><p><strong>Requirements</strong>: The degree to which the
+presentation adhered to the <strong>Presentation Specifications</strong>
+above.</p></li>
+<li><p><strong>Content</strong>: The clarity, depth and accuracy of
+analysis, as well as the appropriateness of the methods used.</p></li>
+<li><p><strong>Style</strong>: The degree to which the written slides
+are well-organized, well-written, coherent and understandable.</p></li>
+<li><p><strong>Delivery</strong>: The degree to which the oral
+presentation is well-organized, well-rehearsed, coherent, understandable
+and engaging</p></li>
 </ul>
 </div>
 </div>

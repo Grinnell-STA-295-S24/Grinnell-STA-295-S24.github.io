@@ -78,3 +78,149 @@ By **5pm Monday, April 8th**, your group will draft a well-written project propo
 - At least 1 paragraph describing the utility of an answer to your research question, or a discussion of why an answer would be interesting or relevant to you.
 
 - A brief discussion of any obstacles you foresee either in data acquisition or analysis.
+
+
+### Exploratory Data Analysis
+
+Before you build any models, you should perform appropriate exploratory (or descriptive) analysis. This might include:
+
+- Data wrangling, including joining two or more data sets into a single set, converting quantitative variables to categorical or collapsing categorical variables to ones with fewer levels, renaming variables and/or variable levels, creating new variables from existing ones
+
+- Descriptive statistics for all variables you intend to investigate. For quantitative variables, this includes: mean, standard deviation, 5-number summaries, and histograms and/or boxplots; and for categorical variables, this includes: a list of all factor levels, as well as counts and proportions within each level, and bar charts.
+
+- Exploration of the relationships between variables, both numerically and graphically. Consider not only the relationship between the response and explanatory variables, but also between two (or more) explanatory variables.
+
+- You should not focus on building statistical models at this stage.
+
+You will summarize your exploratory data analysis in a 2 - 3 page exploratory analysis report, uploaded to your Github repo by **5pm Monday April 22nd**. This report should include:
+
+- A short paragraph introducing your data and the primary research question
+
+- A description of the variables of interest to your investigation
+
+- An overview of of any data wrangling that you performed (you do not need to *show* the code or the code output, just describe what you did and why)
+
+- Graphs and summary tables from your exploratory analysis, along with discussion and interpretation of the results; you do not need to include every summary statistic you calculated or graph you made, but should focus on the most relevant or important ones.
+
+- Brief description of your plans for model building.
+
+
+
+### Technical Report
+
+A final draft of your technical report should be between 3 and 5 pages in length, and is to be uploaded to GitHub by **5pm on Friday, May 17th**. The  technical report should be a .Rmd file with output either to .pdf or .html.  Your report should contain the following sections:
+
+#### Introduction
+
+An overview of the topic and relevant background information, a discussion of existing theories and models, a description of how your investigation differs from prior ones, and a precise statement of your research question.
+
+#### Methods
+
+A description of the data sets used, a discussion of where the data came from and how it was obtained, a summary of the data itself (including the number of observations and variables, and what each observational unit represents), an explanation of data processing implemented to prepare the data for analysis.
+
+#### Exploratory Data Analysis
+
+A presentation of graphical and numerical summaries of the data (along with a discussion of their relevance to modeling assumptions and further analysis), a description of the statistical methods used to analyze your data, and diagnostics of the appropriateness of any models or inference procedures you will apply in the Results section. You do not need to include every graph you created during your research, only those that are most relevant to your results.
+
+#### Results
+
+A description of the tools and methods used to build your models, an overview of the models themselves and a summary of their attributes, a discussion of model comparisons and accuracy, a presentation of model predictions, classifications, and/or parameter inference.
+
+#### Discussion
+
+A review of the results generated from the model and synthesis with the context from which the data was generated or observed, a restatement of research objective and an answer to the original research question, a discussion limitations of the study as well as areas for further research.
+
+#### Code Appendix 
+
+A collection of code used to process data, perform analysis, and build models. To avoid excessive run-times when compiling the document, consider adding `eval = F` to the chunk options (which will force the code not to be run when compiling the document into .pdf or .html)
+
+#### References
+
+The citations for any data sets, literature or resources directly or indirectly referenced in your report, along with any sources you consulted during your investigation that had a significant impact on your analysis. Citations should be made according to the ASA style guide: https://amstat.tfjournals.com/asa-style-guide/
+
+### Presentation
+
+During finals week, each group will give a 10 - 15 minute presentation to the class outlining their project and results. Fifteen minutes is **not** a lot of time, so groups should plan carefully what they will discuss. The structure of the talk should mirror the structure of the technical report (albeit greatly abbreviated). Groups should create slides or an .html page that can be projected in order to engage the audience.
+
+
+
+## Specifications and Rubric
+
+
+### Document Specifications
+
+The final technical report should...
+
+- Be composed as an .Rmd file, and then exported to .pdf.
+
+- Use the standard font and margin sizes.
+
+- Be between 3 and 5 pages in length, including graphics and tables.
+
+- Include a title page, with project title and author names. This page does not count towards the page limit.
+
+- Display the code used to perform your analysis **ONLY** if reading the code is necessary for understanding the output.  
+
+- Include the output of the code (summary statistics, visualizations, and the results of any inference where appropriate).
+  
+- Include graphics with appropriate axes labels and titles, and of reasonable size (i.e. that do not take up a half-page of the document, unless absolutely necessary)
+  
+- Include tables that are neatly formatted and legible.
+
+### Document Formatting Suggestions
+
+- A page break can be created in R using the \newpage command, which should be on its own line after the metadata (stuff concluding with --- at the top of the .Rmd) but before the start of your document prose. 
+  
+- To have code run when you knit, but not display, replace the chunk header `{r}` with `{r echo = F}`.
+
+- If you also don’t want the output of the code to display (for example, for data processing steps), use `{r echo = F, include = F}`
+
+- You can control the size of included graphics by adding `{r fig.width =..., fig.height=...}` to your chunk options, where ... is replaced with the desired width/height of graphic in inches.
+
+- You can create nice tables for .pdf output by piping (`%>%`) a data frame into the `kable()` function from the `knitr` package. Some table formatting options can be controlled through inputs in the `kable` function. For description, see run `?kable()` in the console.
+
+
+### Document Rubric 
+
+
+The final technical report will be assessed on the following:
+
+- **Requirements**: The degree to which the report adhered to the **Document Specifications** above.
+  
+
+- **Content**: The depth and accuracy of analysis, as well as the appropriateness of the methods used.
+
+
+- **Style**: The degree to which the text is well-organized, well-written, coherent and understandable.
+
+
+### Presentation Specifications
+
+The presentation should...
+
+  - Be accompanied by a slideshow with appropriate narrative, data summaries and graphics
+  
+  - Incorporate each group member in a speaking role in a significant way
+  
+  - Be between 10 and 15 minutes in length 
+  
+    - Presentations exceeding 15 minutes will be given a 1-minute warning, and then will be cut-off after 16 minutes, to provide time for all presentations
+    
+  - Be well-rehearsed prior to delivery
+  
+  - Be delivered without reading verbatim from the slides or from notes (notes can be briefly referenced during the presentation, but should not be extensively consulted)
+  
+
+### Presentation Rubric 
+
+The presentation  will be assessed on the following:
+
+- **Requirements**: The degree to which the presentation adhered to the **Presentation Specifications** above.
+  
+
+- **Content**: The clarity, depth and accuracy of analysis, as well as the appropriateness of the methods used.
+
+
+- **Style**: The degree to which the written slides are well-organized, well-written, coherent and understandable.
+
+- **Delivery**: The degree to which the oral presentation is well-organized, well-rehearsed, coherent, understandable and engaging
