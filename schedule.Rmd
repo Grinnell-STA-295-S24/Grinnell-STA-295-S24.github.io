@@ -765,7 +765,7 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 4-16
 
-
+[Lecture Notes](lecture_notes/4-16_Regression_Trees.pdf)
 
 #### Topics
 
