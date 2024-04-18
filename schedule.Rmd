@@ -801,7 +801,7 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 4-18
 
-
+[Lecture Notes](lecture_notes/4-18_Classification_Trees.pdf)
 
  
 #### Topics
