@@ -838,7 +838,7 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 4-23
 
-
+[Lecture Notes](lecture_notes/4-23_Random_Forests.pdf)
 
 #### Topics
 
