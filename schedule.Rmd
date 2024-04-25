@@ -881,14 +881,16 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 4-25
 
- 
+[Lecture Notes](lecture_notes/4-25_Random_Forests_Boosting.pdf)
 
  
 #### Topics
 
+- Random Forests
+
 - Boosted Trees
 
-- Bayesian Additive Trees
+- ~~~Bayesian Additive Trees~~~
 
 
 #### Reading Assignment
