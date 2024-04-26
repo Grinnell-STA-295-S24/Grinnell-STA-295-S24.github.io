@@ -14,11 +14,19 @@ In software development and data science, a **code review** is a formal assessme
 
 In STA 295, we will be adopting this practice to facilitate face-to-face conversations about modeling decisions between students and the instructor.
 
-## Code Review 1
+### Code Review 1
 
 During weeks 7 and 8 (March 4th - March 9th and March 11th - March 15th), students will schedule a 20-minute individual appointment with the instructor to discuss their code and modeling decisions from **Homework 6**. 
 
 A link to the calendly page for meeting times was sent via email on Sunday, March 3rd. Meetings must be scheduled at least 12 hours in advance, and no more than 6 review in total will be scheduled on a single day. Students unable to attend **any** of the available times should reach out to the instructor as soon as possible to make alternative arrangements.
+
+### Code Review 2
+
+During week 13 (April 29th - May 3rd), students will schedule a 20-minute individual appointment with the instructor to discuss their code and modeling decisions from **Homework 9**. 
+
+A link to the calendly page for meeting times was sent via email on Friday, April 26th Meetings must be scheduled at least 12 hours in advance, and no more than 6 review in total will be scheduled on a single day. Students unable to attend **any** of the available times should reach out to the instructor as soon as possible to make alternative arrangements.
+
+## Code Review Details
 
 ### Tasks
 
@@ -53,7 +61,7 @@ Scores on the code review will be based on the following rubric:
 | 1 / D    | **Unsatisfactory**:  very limited ability to articulate purpose and intent of code, with limited or no justification for decisions, and inability to correct any errors in the original submission. Many errors made during the review. |
 | 0 / F    | **No credit**:  inability to present any understanding of the code under review.  |
 
-**NOTE**: Scores will be based on the student's ability to discuss the code submitted for homework 6, and identify errors in the code and articulate solutions. However, they will *not* be based on whether the original code itself contained errors.
+**NOTE**: Scores will be based on the student's ability to discuss the code submitted for homework 6 or 9, and identify errors in the code and articulate solutions. However, they will *not* be based on whether the original code itself contained errors.
 
 If the code happened to contain no non-trivial errors, the instructor may propose a few changes to the code that would introduce errors, and ask the student to explain why these changes would produce errors.
 
