@@ -919,7 +919,9 @@ Answer **ONE** of the following two questions:
 
 #### Topics
 
-- TBA
+- Boosted Trees
+
+- Beyond the `gbm` package
 
 
 
@@ -931,7 +933,7 @@ Answer **ONE** of the following two questions:
 
 *The listed reading assignments should be completed prior to class*
 
-- TBA
+- Read the [XGBoost R Tutorial](https://xgboost.readthedocs.io/en/latest/R-package/xgboostPresentation.html)
 
 
 
@@ -939,9 +941,7 @@ Answer **ONE** of the following two questions:
 
 *Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
 
-Answer **ONE** of the following two questions:
-
-1. TBA
+1. Consider an occasion when you encountered a new challenge, puzzle or problem which required multiple attempts to solve. Describe the challenge, puzzle or problem, and detail the strategy you used to overcome it.
 
 
 
