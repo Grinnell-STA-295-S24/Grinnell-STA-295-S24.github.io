@@ -906,3 +906,70 @@ Answer **ONE** of the following two questions:
 
 
 1. Compare and contrast two of the three tree-based methods: random forests, boosting, Bayesian additive trees
+
+
+
+------------------------------------------------------
+
+## Week 13
+
+### Tuesday 4-30
+
+ 
+
+#### Topics
+
+- TBA
+
+
+
+  
+
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+
+- TBA
+
+
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+Answer **ONE** of the following two questions:
+
+1. TBA
+
+
+
+#### Due
+
+- None
+
+
+### Thursday 5-2
+
+ 
+
+ 
+#### Topics
+
+- TBA
+
+
+#### Reading Assignment
+
+*The listed reading assignments should be completed prior to class*
+ 
+- TBA
+
+##### Discussion Question
+
+*Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
+
+
+
+1. TBA
