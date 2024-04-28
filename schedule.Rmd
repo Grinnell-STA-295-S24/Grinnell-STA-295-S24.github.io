@@ -957,14 +957,14 @@ Answer **ONE** of the following two questions:
  
 #### Topics
 
-- TBA
+- Tidymodels
 
 
 #### Reading Assignment
 
 *The listed reading assignments should be completed prior to class*
  
-- TBA
+- Skim Chapters 6, 7, 8 in [Tidy Modeling with R](https://www.tmwr.org/)
 
 ##### Discussion Question
 
@@ -972,4 +972,4 @@ Answer **ONE** of the following two questions:
 
 
 
-1. TBA
+1. Based on the reading for today, what is one advantage of the `tidymodels` framework, compared to the workflow we’ve used earlier in the term? What is one disadvantage?
