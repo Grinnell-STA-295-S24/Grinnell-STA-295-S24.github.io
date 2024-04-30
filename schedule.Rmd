@@ -915,7 +915,9 @@ Answer **ONE** of the following two questions:
 
 ### Tuesday 4-30
 
- 
+[Lecture Notes](lecture_notes/4-30_Boosting.pdf)
+
+[Notes on Tuning Boosted Trees](files/boosted_tree.html)
 
 #### Topics
 
