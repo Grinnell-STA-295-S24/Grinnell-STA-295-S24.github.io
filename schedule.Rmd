@@ -954,7 +954,7 @@ Answer **ONE** of the following two questions:
 
 ### Thursday 5-2
 
- 
+[Lecture Notes](lecture_notes/5_2_Tidymodels.pdf)
 
  
 #### Topics
