@@ -1,0 +1,181 @@
+---
+title: "Tidymodels Boosted Trees"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warning = F,
+                      message = F,
+                      cache = T)
+```
+
+
+## Load Tidymodels packages
+
+```{r}
+library(tidymodels)
+```
+
+
+## Load Data
+
+Here, we have a subset of the Ames housing data:
+
+```{r}
+library(dplyr)
+house<-read.csv("data/house.csv") %>% relocate(SalePrice, Id)
+```
+
+
+```{r echo = T}
+names(house)
+dim(house)
+
+library(rsample)
+set.seed(325)
+data_split <- initial_split(house , prop = 3/4, strata = SalePrice)
+train_data <- training(data_split)
+test_data <- testing(data_split)
+```
+
+## Create Pre-processing recipe
+
+```{r}
+house_rec <- recipe(SalePrice ~ ., data = train_data) %>% 
+  update_role(Id, new_role = "ID") %>% 
+  step_log(LotArea, base = 10) %>% 
+  step_mutate(TotalBath = FullBath+0.5*HalfBath) %>% 
+  step_rm(FullBath, HalfBath) %>% 
+  step_novel(all_nominal()) %>% 
+  step_dummy(all_nominal(), - all_outcomes()) 
+```
+
+## Determine Model Formula
+
+Here, we identify the parameters we want to tune via cross-validation
+
+```{r}
+boosted_mod <- boost_tree(
+  trees = tune(),
+  tree_depth = tune(), 
+  min_n = tune(),
+  learn_rate = tune()
+) %>% 
+  set_engine("xgboost") %>% 
+  set_mode("regression")
+```
+
+## Specify Parameter Grid
+
+The `crossing` function will create a regular grid of parameters:
+
+```{r}
+trees <- c(500, 1000, 2000)
+tree_depth <- c(3, 5, 7)
+min_n <- c(5, 10, 20)
+learn_rate <- c(0.001, 0.005, 0.01, 0.1)
+
+xgb_grid <- crossing(trees, tree_depth, min_n, learn_rate)
+```
+
+## Set Workflow
+
+```{r}
+xgb_wf <- workflow() %>% 
+  add_model(boosted_mod) %>% 
+  add_recipe(house_rec)
+```
+
+
+## Prepare Folds
+
+```{r}
+set.seed(132)
+my_folds <- vfold_cv(train_data, strata = SalePrice)
+```
+
+
+
+## Tuning Time
+
+```{r echo = T, cache = T}
+set.seed(336)
+my_time <- system.time(
+xgb_res <- tune_grid(
+  xgb_wf,
+  resamples = my_folds,
+  grid = xgb_grid,
+  control = control_grid(save_pred = TRUE)
+)
+)
+```
+
+
+```{r}
+my_time["elapsed"]
+```
+
+This took about 3 minutes on my 2023 Macbook Pro.
+
+## Explore Results
+
+```{r}
+collect_metrics(xgb_res)
+```
+
+```{r}
+show_best(xgb_res, metric = "rmse")
+
+show_best(xgb_res, metric = "rsq")
+```
+
+## Visualize Parameters
+
+```{r fig.height=8, fig.width=8}
+xgb_res %>% collect_metrics() %>% 
+  filter(.metric == "rmse") %>% 
+  ggplot(aes(x = tree_depth, y = mean, shape = as.factor(trees), color = as.factor(min_n)))+
+  geom_jitter(width = .35, size = 2, alpha = .9)+ 
+  facet_wrap(~as.factor(learn_rate), scale = "free")+
+  labs(title = "RMSE")
+
+
+xgb_res %>% collect_metrics() %>% 
+  filter(.metric == "rsq") %>% 
+  ggplot(aes(x = tree_depth, y = mean, shape = as.factor(trees), color = as.factor(min_n)))+
+  geom_jitter(width = .35, size = 2, alpha = .9)+ 
+  facet_wrap(~as.factor(learn_rate), scale = "free") +
+  labs(title = "RSQ")
+```
+
+## Select Best Parameters
+
+```{r}
+best_rmse <- select_best(xgb_res, metric = "rmse")
+best_rmse
+
+best_rsq <- select_best(xgb_res, metric = "rsq")
+best_rsq
+```
+
+## Finalize
+
+```{r}
+final_xgb_rmse <- finalize_workflow(xgb_wf, best_rmse)
+
+final_xgb_rmse
+
+final_xgb_rsq<- finalize_workflow(xgb_wf, best_rsq)
+
+final_xgb_rsq
+```
+
+```{r}
+final_res_rmse <- last_fit(final_xgb_rmse, data_split)
+collect_metrics(final_res_rmse)
+
+final_res_rsq <- last_fit(final_xgb_rsq, data_split)
+collect_metrics(final_res_rsq)
+```
+

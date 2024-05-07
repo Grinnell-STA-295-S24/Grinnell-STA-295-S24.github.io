@@ -987,6 +987,12 @@ Answer **ONE** of the following two questions:
 ### Tuesday 5-7
 
 
+Boosted Trees using `tidymodels`
+
+  - [html file](files/tidy_model_boosted.html)
+  
+  - [Rmd file](files/tidy_model_boosted.Rmd)
+
 #### Topics
 
 - Finish discussing `tidymodels`
@@ -1025,20 +1031,26 @@ None
  
 #### Topics
 
-- TBA
+- Discuss elements of effective presentations
+
+- Work on final project
 
 
 #### Reading Assignment
 
 *The listed reading assignments should be completed prior to class*
  
-- TBA
+- None
 
 ##### Discussion Question
 
 *Responses to questions should be added as an answer on the day's post in the `Discussions` section on the class Github Organization [Grinnell-STA-295-S24](https://github.com/Grinnell-STA-295-S24). These responses should be submitted before the start of class* 
 
 
+1. Reflect on academic presentations you've witnessed as well as participated in. 
 
-1. TBA
+   - Describe two specific elements of an effective presentation, and briefly discuss why these elements are important.
 
+    - Describe one thing that should be **avoided** in an effective presentation (alternatively, one element that is often included in an *ineffective* presentation). Explain why it should be avoided.
+  
+    - Describe one specific element of an effective presentation about data and statistical models (this element should be specific to presentations about data, and not presentations in general).
