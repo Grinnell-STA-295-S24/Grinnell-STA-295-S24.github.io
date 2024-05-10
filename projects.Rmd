@@ -136,7 +136,7 @@ A collection of code used to process data, perform analysis, and build models. T
 
 #### References
 
-The citations for any data sets, literature or resources directly or indirectly referenced in your report, along with any sources you consulted during your investigation that had a significant impact on your analysis. Citations should be made according to the ASA style guide: https://amstat.tfjournals.com/asa-style-guide/
+The citations for any data sets, literature or resources directly or indirectly referenced in your report, along with any sources you consulted during your investigation that had a significant impact on your analysis. Citations can be made either according to [AP guidelines](https://owl.purdue.edu/owl/subject_specific_writing/journalism_and_journalistic_writing/ap_style.html) or [Chicago guidelines](https://owl.purdue.edu/owl/research_and_citation/chicago_manual_17th_edition/cmos_formatting_and_style_guide/chicago_manual_of_style_17th_edition.html.
 
 ### Presentation
 
